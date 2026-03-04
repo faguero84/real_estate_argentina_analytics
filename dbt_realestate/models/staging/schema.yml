@@ -1,0 +1,51 @@
+# models/staging/schema.yml
+# ==========================
+# Documentación y tests de los modelos de staging.
+#
+# Concepto clave: en dbt, los tests son assertions SQL que
+# se ejecutan con `dbt test`. Si un test falla, el pipeline
+# se detiene — esto es "data quality as code".
+
+version: 2
+
+models:
+  - name: stg_properties
+    description: >
+      Tabla de propiedades de Argentina limpia y tipada.
+      Una fila = una publicación de propiedad.
+      Fuente: raw.properties (ar_properties.csv de Kaggle).
+
+    columns:
+      - name: operation_type
+        description: "Tipo de operación: Venta, Alquiler, Alquiler temporal"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Venta', 'Alquiler', 'Alquiler temporal']
+
+      - name: currency
+        description: "Moneda del precio: ARS (pesos) o USD (dólares)"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['ARS', 'USD']
+
+      - name: precio
+        description: "Precio de la operación en la moneda indicada"
+        tests:
+          - not_null
+
+      - name: fecha_alta
+        description: "Fecha en que se publicó la propiedad"
+        tests:
+          - not_null
+
+      - name: provincia
+        description: "Provincia donde está ubicada la propiedad (columna l2 del CSV)"
+        tests:
+          - not_null
+
+      - name: ciudad
+        description: "Ciudad donde está ubicada la propiedad (columna l3 del CSV)"
+        tests:
+          - not_null

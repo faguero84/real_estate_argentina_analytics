@@ -1,0 +1,41 @@
+# models/marts/schema.yml
+
+version: 2
+
+models:
+  - name: fact_publicaciones
+    description: >
+      Tabla de hechos central del DW Real Estate Argentina Analytics.
+      Incluye todas las métricas calculadas: precio_por_m2,
+      ingreso_comision, dias_publicacion.
+      Lista para conectar a Tableau como fuente de datos.
+
+    columns:
+      - name: id_publicacion
+        description: "Surrogate key único por publicación"
+        tests:
+          - unique
+          - not_null
+
+      - name: precio
+        description: "Precio de la operación en la moneda indicada"
+        tests:
+          - not_null
+
+      - name: ingreso_comision
+        description: "Comisión estimada: precio × porcentaje según tipo de operación"
+
+      - name: dias_publicacion
+        description: >
+          Días entre fecha_alta y fecha_baja.
+          NULL si la publicación sigue activa.
+
+  - name: mart_kpis_geo
+    description: >
+      KPIs geográficos agregados por provincia, ciudad, tipo de operación y moneda.
+      Modelo directo para el mapa interactivo y el treemap de Tableau.
+
+  - name: mart_kpis_tiempo
+    description: >
+      Serie temporal mensual de publicaciones y comisiones.
+      Modelo directo para el gráfico de línea de tiempo en Tableau.
