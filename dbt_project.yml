@@ -1,0 +1,38 @@
+# dbt_project.yml
+# ================
+# Archivo central de configuración de dbt.
+# Define cómo se llama el proyecto, dónde están los modelos,
+# y qué configuración aplica a cada capa.
+
+name: real_estate_analytics
+version: '1.0.0'
+config-version: 2
+
+profile: real_estate_analytics   # referencia al profiles.yml (credenciales)
+
+# Rutas del proyecto
+model-paths:    ["models"]
+test-paths:     ["tests"]
+macro-paths:    ["macros"]
+target-path:    "target"      # aquí dbt guarda el SQL compilado
+clean-targets:  ["target", "dbt_packages"]
+
+# ── Configuración por capa ────────────────────────────────────
+#
+# Concepto clave — las 3 capas de dbt:
+#
+#  STAGING  → 1 modelo por tabla fuente, solo limpieza y renombrado
+#             materializado como VIEW (no ocupa espacio en disco)
+#
+#  MARTS    → modelos analíticos finales, listos para Tableau
+#             materializado como TABLE (precalculado, rápido para dashboards)
+#
+models:
+  real_estate_analytics:
+    staging:
+      +materialized: view       # staging = vistas, se recalculan en cada query
+      +schema: staging          # se crean en el schema "staging" de DuckDB
+
+    marts:
+      +materialized: table      # marts = tablas físicas, precalculadas
+      +schema: marts            # se crean en el schema "marts" de DuckDB

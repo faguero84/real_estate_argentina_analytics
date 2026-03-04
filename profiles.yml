@@ -1,0 +1,18 @@
+# profiles.yml
+# =============
+# Credenciales de conexión a la base de datos.
+# Este archivo va en la carpeta del proyecto (no en ~/.dbt/)
+# para que sea portable y versionable en GitHub.
+#
+# IMPORTANTE: El path al .duckdb NO se sube a GitHub
+# porque está en .gitignore. Solo se sube este profiles.yml
+# que referencia la variable de entorno.
+
+real_estate_analytics:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: "{{ env_var('DUCKDB_PATH', '../data/real_estate.duckdb') }}"
+      # DuckDB no necesita usuario ni contraseña
+      # Es un archivo local — eso lo hace ideal para portfolios

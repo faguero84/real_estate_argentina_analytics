@@ -1,0 +1,18 @@
+# Real Estate Argentina Analytics — Data Pipeline
+# Instalá todo con: pip install -r requirements.txt
+
+# — Datos y warehouse —
+duckdb==0.10.2          # motor analítico columnar (reemplaza SQLite)
+kagglehub               # descarga automática del dataset desde Kaggle
+pandas==2.2.1           # manipulación de datos en la capa de ingesta
+pyarrow==15.0.2         # formato columnar, requerido por duckdb
+
+# — Transformación —
+dbt-core==1.8.0         # framework de transformación SQL
+dbt-duckdb==1.8.0       # adaptador dbt para DuckDB
+
+# — Orquestación —
+prefect==3.0.0          # orquestación moderna de pipelines
+
+# — Visualización y utilidades —
+python-dotenv==1.0.1    # manejo de variables de entorno (.env)
