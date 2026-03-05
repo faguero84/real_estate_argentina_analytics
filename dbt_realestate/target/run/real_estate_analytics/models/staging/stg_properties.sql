@@ -1,4 +1,7 @@
--- models/staging/stg_properties.sql
+
+  
+  create view "real_estate"."main_staging"."stg_properties__dbt_tmp" as (
+    -- models/staging/stg_properties.sql
 -- ===================================
 -- Modelo STAGING: limpieza y tipado de la tabla cruda.
 --
@@ -67,3 +70,4 @@ validated AS (
 )
 
 SELECT * FROM validated
+  );

@@ -1,0 +1,2277 @@
+[0m11:57:22.423654 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFD9CF7A70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFD90C4800>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFD8E732C0>]}
+
+
+============================== 11:57:22.475464 | ae7e2f7b-6b9d-4214-95fe-90017a28dc7b ==============================
+[0m11:57:22.475464 [info ] [MainThread]: Running with dbt=1.8.0
+[0m11:57:22.479203 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '.', 'log_path': 'C:\\Users\\ivana\\real_estate_argentina_analytics\\dbt_realestate\\logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'static_parser': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'invocation_command': 'dbt run --profiles-dir .', 'send_anonymous_usage_stats': 'True'}
+[0m11:57:23.609299 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ae7e2f7b-6b9d-4214-95fe-90017a28dc7b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFDA0E9A30>]}
+[0m11:57:23.681676 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ae7e2f7b-6b9d-4214-95fe-90017a28dc7b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFD9F40590>]}
+[0m11:57:23.691563 [info ] [MainThread]: Registered adapter: duckdb=1.8.0
+[0m11:57:23.970015 [debug] [MainThread]: checksum: dbb12d416fdb55e3665e4828703bbedf40c5c90ed7ca6ff39bbbfb29b12b0a92, vars: {}, profile: , target: , version: 1.8.0
+[0m11:57:23.985673 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m11:57:23.987694 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'ae7e2f7b-6b9d-4214-95fe-90017a28dc7b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFD8B5FDA0>]}
+[0m11:57:25.080996 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `tests` config has been renamed to `data_tests`. Please see
+https://docs.getdbt.com/docs/build/data-tests#new-data_tests-syntax for more
+information.
+[0m11:57:25.097762 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'ae7e2f7b-6b9d-4214-95fe-90017a28dc7b', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFDA167D40>]}
+[0m11:57:25.380461 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ae7e2f7b-6b9d-4214-95fe-90017a28dc7b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFDB51C740>]}
+[0m11:57:26.370153 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ae7e2f7b-6b9d-4214-95fe-90017a28dc7b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFD9939190>]}
+[0m11:57:26.371167 [info ] [MainThread]: Found 4 models, 11 data tests, 421 macros
+[0m11:57:26.377098 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ae7e2f7b-6b9d-4214-95fe-90017a28dc7b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFDB802D20>]}
+[0m11:57:26.382383 [info ] [MainThread]: 
+[0m11:57:26.382383 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m11:57:26.430490 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_real_estate'
+[0m11:57:26.969566 [debug] [ThreadPool]: Using duckdb connection "list_real_estate"
+[0m11:57:26.969566 [debug] [ThreadPool]: On list_real_estate: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "connection_name": "list_real_estate"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where catalog_name = '"real_estate"'
+    
+  
+  
+[0m11:57:26.973446 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:57:26.994159 [debug] [ThreadPool]: SQL status: OK in 0.022 seconds
+[0m11:57:26.997052 [debug] [ThreadPool]: On list_real_estate: Close
+[0m11:57:27.001329 [debug] [ThreadPool]: Using duckdb connection "list_real_estate"
+[0m11:57:27.002632 [debug] [ThreadPool]: On list_real_estate: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "connection_name": "list_real_estate"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where catalog_name = '"real_estate"'
+    
+  
+  
+[0m11:57:27.002632 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m11:57:27.011564 [debug] [ThreadPool]: SQL status: OK in 0.008 seconds
+[0m11:57:27.013423 [debug] [ThreadPool]: On list_real_estate: Close
+[0m11:57:27.015714 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_real_estate, now create_real_estate_main_marts)
+[0m11:57:27.017107 [debug] [ThreadPool]: Creating schema "database: "real_estate"
+schema: "main_marts"
+"
+[0m11:57:27.017107 [debug] [ThreadPool]: Using duckdb connection "create_real_estate_main_marts"
+[0m11:57:27.017107 [debug] [ThreadPool]: On create_real_estate_main_marts: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "connection_name": "create_real_estate_main_marts"} */
+
+    
+        select type from duckdb_databases()
+        where database_name='real_estate'
+        and type='sqlite'
+    
+  
+[0m11:57:27.024123 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m11:57:27.031619 [debug] [ThreadPool]: SQL status: OK in 0.008 seconds
+[0m11:57:27.033616 [debug] [ThreadPool]: Using duckdb connection "create_real_estate_main_marts"
+[0m11:57:27.033616 [debug] [ThreadPool]: On create_real_estate_main_marts: BEGIN
+[0m11:57:27.035043 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m11:57:27.035043 [debug] [ThreadPool]: Using duckdb connection "create_real_estate_main_marts"
+[0m11:57:27.036081 [debug] [ThreadPool]: On create_real_estate_main_marts: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "connection_name": "create_real_estate_main_marts"} */
+
+    
+    
+        create schema if not exists "real_estate"."main_marts"
+    
+[0m11:57:27.036936 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m11:57:27.037975 [debug] [ThreadPool]: On create_real_estate_main_marts: COMMIT
+[0m11:57:27.037975 [debug] [ThreadPool]: Using duckdb connection "create_real_estate_main_marts"
+[0m11:57:27.039350 [debug] [ThreadPool]: On create_real_estate_main_marts: COMMIT
+[0m11:57:27.042837 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m11:57:27.043882 [debug] [ThreadPool]: On create_real_estate_main_marts: Close
+[0m11:57:27.125284 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_real_estate_main_marts, now create_real_estate_main_staging)
+[0m11:57:27.127339 [debug] [ThreadPool]: Creating schema "database: "real_estate"
+schema: "main_staging"
+"
+[0m11:57:27.127339 [debug] [ThreadPool]: Using duckdb connection "create_real_estate_main_staging"
+[0m11:57:27.127339 [debug] [ThreadPool]: On create_real_estate_main_staging: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "connection_name": "create_real_estate_main_staging"} */
+
+    
+        select type from duckdb_databases()
+        where database_name='real_estate'
+        and type='sqlite'
+    
+  
+[0m11:57:27.127339 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m11:57:27.165871 [debug] [ThreadPool]: SQL status: OK in 0.024 seconds
+[0m11:57:27.166908 [debug] [ThreadPool]: Using duckdb connection "create_real_estate_main_staging"
+[0m11:57:27.166908 [debug] [ThreadPool]: On create_real_estate_main_staging: BEGIN
+[0m11:57:27.170185 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m11:57:27.171220 [debug] [ThreadPool]: Using duckdb connection "create_real_estate_main_staging"
+[0m11:57:27.172067 [debug] [ThreadPool]: On create_real_estate_main_staging: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "connection_name": "create_real_estate_main_staging"} */
+
+    
+    
+        create schema if not exists "real_estate"."main_staging"
+    
+[0m11:57:27.172067 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m11:57:27.173814 [debug] [ThreadPool]: On create_real_estate_main_staging: COMMIT
+[0m11:57:27.174919 [debug] [ThreadPool]: Using duckdb connection "create_real_estate_main_staging"
+[0m11:57:27.175961 [debug] [ThreadPool]: On create_real_estate_main_staging: COMMIT
+[0m11:57:27.180693 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m11:57:27.181700 [debug] [ThreadPool]: On create_real_estate_main_staging: Close
+[0m11:57:27.207644 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_real_estate_main_marts'
+[0m11:57:27.209676 [debug] [ThreadPool]: Using duckdb connection "list_real_estate_main_marts"
+[0m11:57:27.209676 [debug] [ThreadPool]: On list_real_estate_main_marts: BEGIN
+[0m11:57:27.219001 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:57:27.232235 [debug] [ThreadPool]: SQL status: OK in 0.013 seconds
+[0m11:57:27.233271 [debug] [ThreadPool]: Using duckdb connection "list_real_estate_main_marts"
+[0m11:57:27.234496 [debug] [ThreadPool]: On list_real_estate_main_marts: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "connection_name": "list_real_estate_main_marts"} */
+select
+      'real_estate' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'main_marts'
+    and table_catalog = 'real_estate'
+  
+[0m11:57:27.305631 [debug] [ThreadPool]: SQL status: OK in 0.074 seconds
+[0m11:57:27.305631 [debug] [ThreadPool]: On list_real_estate_main_marts: ROLLBACK
+[0m11:57:27.305631 [debug] [ThreadPool]: Failed to rollback 'list_real_estate_main_marts'
+[0m11:57:27.305631 [debug] [ThreadPool]: On list_real_estate_main_marts: Close
+[0m11:57:27.320370 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_real_estate_main_marts, now list_real_estate_main_staging)
+[0m11:57:27.321374 [debug] [ThreadPool]: Using duckdb connection "list_real_estate_main_staging"
+[0m11:57:27.321374 [debug] [ThreadPool]: On list_real_estate_main_staging: BEGIN
+[0m11:57:27.325389 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m11:57:27.334126 [debug] [ThreadPool]: SQL status: OK in 0.009 seconds
+[0m11:57:27.334126 [debug] [ThreadPool]: Using duckdb connection "list_real_estate_main_staging"
+[0m11:57:27.335163 [debug] [ThreadPool]: On list_real_estate_main_staging: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "connection_name": "list_real_estate_main_staging"} */
+select
+      'real_estate' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'main_staging'
+    and table_catalog = 'real_estate'
+  
+[0m11:57:27.364361 [debug] [ThreadPool]: SQL status: OK in 0.029 seconds
+[0m11:57:27.364361 [debug] [ThreadPool]: On list_real_estate_main_staging: ROLLBACK
+[0m11:57:27.364361 [debug] [ThreadPool]: Failed to rollback 'list_real_estate_main_staging'
+[0m11:57:27.364361 [debug] [ThreadPool]: On list_real_estate_main_staging: Close
+[0m11:57:27.371875 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ae7e2f7b-6b9d-4214-95fe-90017a28dc7b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFDBA4A090>]}
+[0m11:57:27.371875 [debug] [MainThread]: Using duckdb connection "master"
+[0m11:57:27.372895 [debug] [MainThread]: On master: BEGIN
+[0m11:57:27.373895 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:57:27.381194 [debug] [MainThread]: SQL status: OK in 0.008 seconds
+[0m11:57:27.382194 [debug] [MainThread]: On master: COMMIT
+[0m11:57:27.383232 [debug] [MainThread]: Using duckdb connection "master"
+[0m11:57:27.383232 [debug] [MainThread]: On master: COMMIT
+[0m11:57:27.384389 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m11:57:27.384389 [debug] [MainThread]: On master: Close
+[0m11:57:27.387010 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m11:57:27.387974 [info ] [MainThread]: 
+[0m11:57:27.400060 [debug] [Thread-1 (]: Began running node model.real_estate_analytics.stg_properties
+[0m11:57:27.401062 [info ] [Thread-1 (]: 1 of 4 START sql view model main_staging.stg_properties ........................ [RUN]
+[0m11:57:27.401062 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.real_estate_analytics.stg_properties'
+[0m11:57:27.402698 [debug] [Thread-1 (]: Began compiling node model.real_estate_analytics.stg_properties
+[0m11:57:27.402698 [debug] [Thread-1 (]: Writing injected SQL for node "model.real_estate_analytics.stg_properties"
+[0m11:57:27.411751 [debug] [Thread-1 (]: Began executing node model.real_estate_analytics.stg_properties
+[0m11:57:27.481107 [debug] [Thread-1 (]: Writing runtime sql for node "model.real_estate_analytics.stg_properties"
+[0m11:57:27.485872 [debug] [Thread-1 (]: Using duckdb connection "model.real_estate_analytics.stg_properties"
+[0m11:57:27.486876 [debug] [Thread-1 (]: On model.real_estate_analytics.stg_properties: BEGIN
+[0m11:57:27.486876 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m11:57:27.504079 [debug] [Thread-1 (]: SQL status: OK in 0.015 seconds
+[0m11:57:27.505126 [debug] [Thread-1 (]: Using duckdb connection "model.real_estate_analytics.stg_properties"
+[0m11:57:27.505126 [debug] [Thread-1 (]: On model.real_estate_analytics.stg_properties: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "model.real_estate_analytics.stg_properties"} */
+
+  
+  create view "real_estate"."main_staging"."stg_properties__dbt_tmp" as (
+    -- models/staging/stg_properties.sql
+-- ===================================
+-- Modelo STAGING: limpieza y tipado de la tabla cruda.
+--
+-- Responsabilidades de staging:
+--   ✓ Renombrar columnas a nombres claros
+--   ✓ Castear tipos de datos correctos
+--   ✓ Filtrar filas inválidas (precio nulo, fechas inválidas)
+--   ✓ Normalizar strings (trim, uppercase)
+--   ✗ NO hace joins
+--   ✗ NO agrega lógica de negocio
+--   ✗ NO crea métricas
+
+WITH source AS (
+    -- Referenciamos la tabla RAW que cargó load_raw.py
+    SELECT * FROM raw.properties
+),
+
+cleaned AS (
+    SELECT
+        -- ── Operación ─────────────────────────────────────────
+        TRIM(operation_type)                        AS operation_type,
+        TRIM(currency)                              AS currency,
+
+        -- ── Propiedad ─────────────────────────────────────────
+        TRIM(property_type)                         AS property_type,
+        TRY_CAST(rooms AS INTEGER)                  AS rooms,
+        -- TRY_CAST devuelve NULL en vez de error si el valor es inválido
+        -- Más robusto que CAST para datos sucios
+
+        -- ── Geografía ─────────────────────────────────────────
+        TRIM(l1)                                    AS pais,
+        TRIM(l2)                                    AS provincia,
+        TRIM(l3)                                    AS ciudad,
+
+        -- ── Fechas ────────────────────────────────────────────
+        TRY_CAST(start_date AS DATE)                AS fecha_alta,
+        TRY_CAST(end_date   AS DATE)                AS fecha_baja,
+
+        -- ── Métricas base ─────────────────────────────────────
+        TRY_CAST(price           AS DOUBLE)         AS precio,
+        TRY_CAST(surface_covered AS DOUBLE)         AS superficie_cubierta,
+        TRY_CAST(surface_total   AS DOUBLE)         AS superficie_total,
+
+        -- ── Metadatos de carga ────────────────────────────────
+        _loaded_at,
+        _source_file
+
+    FROM source
+),
+
+validated AS (
+    SELECT *
+    FROM cleaned
+    WHERE
+        -- Filtros de calidad — registros que no tienen sentido analítico
+        operation_type IN ('Venta', 'Alquiler', 'Alquiler temporal')
+        AND currency       IN ('ARS', 'USD')
+        AND precio         IS NOT NULL
+        AND precio         > 0
+        AND fecha_alta     IS NOT NULL
+        -- Descartamos superficies imposibles (negativas o gigantes)
+        AND (superficie_total   IS NULL OR superficie_total   BETWEEN 5 AND 50000)
+        AND (superficie_cubierta IS NULL OR superficie_cubierta BETWEEN 5 AND 50000)
+)
+
+SELECT * FROM validated
+  );
+
+[0m11:57:27.510750 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m11:57:27.514483 [debug] [Thread-1 (]: Using duckdb connection "model.real_estate_analytics.stg_properties"
+[0m11:57:27.514483 [debug] [Thread-1 (]: On model.real_estate_analytics.stg_properties: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "model.real_estate_analytics.stg_properties"} */
+alter view "real_estate"."main_staging"."stg_properties__dbt_tmp" rename to "stg_properties"
+[0m11:57:27.532301 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m11:57:27.549324 [debug] [Thread-1 (]: On model.real_estate_analytics.stg_properties: COMMIT
+[0m11:57:27.549324 [debug] [Thread-1 (]: Using duckdb connection "model.real_estate_analytics.stg_properties"
+[0m11:57:27.562608 [debug] [Thread-1 (]: On model.real_estate_analytics.stg_properties: COMMIT
+[0m11:57:27.566738 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m11:57:27.568670 [debug] [Thread-1 (]: Using duckdb connection "model.real_estate_analytics.stg_properties"
+[0m11:57:27.568670 [debug] [Thread-1 (]: On model.real_estate_analytics.stg_properties: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "model.real_estate_analytics.stg_properties"} */
+drop view if exists "real_estate"."main_staging"."stg_properties__dbt_backup" cascade
+[0m11:57:27.577052 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m11:57:27.581474 [debug] [Thread-1 (]: On model.real_estate_analytics.stg_properties: Close
+[0m11:57:27.605606 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ae7e2f7b-6b9d-4214-95fe-90017a28dc7b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFD7888B60>]}
+[0m11:57:27.606638 [info ] [Thread-1 (]: 1 of 4 OK created sql view model main_staging.stg_properties ................... [[32mOK[0m in 0.20s]
+[0m11:57:27.608596 [debug] [Thread-1 (]: Finished running node model.real_estate_analytics.stg_properties
+[0m11:57:27.609467 [debug] [Thread-1 (]: Began running node model.real_estate_analytics.fact_publicaciones
+[0m11:57:27.610503 [info ] [Thread-1 (]: 2 of 4 START sql table model main_marts.fact_publicaciones ..................... [RUN]
+[0m11:57:27.610503 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.real_estate_analytics.stg_properties, now model.real_estate_analytics.fact_publicaciones)
+[0m11:57:27.612865 [debug] [Thread-1 (]: Began compiling node model.real_estate_analytics.fact_publicaciones
+[0m11:57:27.614904 [debug] [Thread-1 (]: Writing injected SQL for node "model.real_estate_analytics.fact_publicaciones"
+[0m11:57:27.619203 [debug] [Thread-1 (]: Began executing node model.real_estate_analytics.fact_publicaciones
+[0m11:57:27.631099 [debug] [Thread-1 (]: Writing runtime sql for node "model.real_estate_analytics.fact_publicaciones"
+[0m11:57:27.638456 [debug] [Thread-1 (]: Using duckdb connection "model.real_estate_analytics.fact_publicaciones"
+[0m11:57:27.639490 [debug] [Thread-1 (]: On model.real_estate_analytics.fact_publicaciones: BEGIN
+[0m11:57:27.640287 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:57:27.648502 [debug] [Thread-1 (]: SQL status: OK in 0.008 seconds
+[0m11:57:27.649537 [debug] [Thread-1 (]: Using duckdb connection "model.real_estate_analytics.fact_publicaciones"
+[0m11:57:27.649537 [debug] [Thread-1 (]: On model.real_estate_analytics.fact_publicaciones: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "model.real_estate_analytics.fact_publicaciones"} */
+
+  
+    
+    
+
+    create  table
+      "real_estate"."main_marts"."fact_publicaciones__dbt_tmp"
+  
+    as (
+      -- models/marts/fact_publicaciones.sql
+-- =====================================
+-- Modelo MART: tabla de hechos lista para Tableau.
+--
+-- Este modelo construye la tabla central del star schema
+-- con todas las métricas calculadas y claves foráneas resueltas.
+-- Es el modelo que Tableau va a consumir directamente.
+
+WITH base AS (
+    -- Referenciamos el modelo de staging con ref()
+    -- ref() es la forma de dbt de conectar modelos entre sí
+    -- Ventaja: dbt construye automáticamente el orden de ejecución
+    SELECT * FROM "real_estate"."main_staging"."stg_properties"
+),
+
+with_metrics AS (
+    SELECT
+        -- ── Identificador único ───────────────────────────────
+        ROW_NUMBER() OVER (ORDER BY fecha_alta, operation_type) AS id_publicacion,
+
+        -- ── Dimensiones (para filtros en Tableau) ────────────
+        operation_type,
+        currency,
+        property_type,
+        rooms,
+        pais,
+        provincia,
+        ciudad,
+
+        -- ── Dimensión tiempo descompuesta ────────────────────
+        -- Tableau puede hacer esto, pero tenerlo precalculado
+        -- hace los dashboards más rápidos
+        fecha_alta,
+        fecha_baja,
+        YEAR(fecha_alta)                            AS anio,
+        QUARTER(fecha_alta)                         AS trimestre,
+        MONTH(fecha_alta)                           AS mes,
+        DAYOFWEEK(fecha_alta)                       AS dia_semana,
+        -- Nombre del mes en español para labels en Tableau
+        CASE MONTH(fecha_alta)
+            WHEN 1  THEN 'Enero'    WHEN 2  THEN 'Febrero'
+            WHEN 3  THEN 'Marzo'    WHEN 4  THEN 'Abril'
+            WHEN 5  THEN 'Mayo'     WHEN 6  THEN 'Junio'
+            WHEN 7  THEN 'Julio'    WHEN 8  THEN 'Agosto'
+            WHEN 9  THEN 'Septiembre' WHEN 10 THEN 'Octubre'
+            WHEN 11 THEN 'Noviembre'  WHEN 12 THEN 'Diciembre'
+        END                                         AS nombre_mes,
+
+        -- ── Métricas de precio ────────────────────────────────
+        precio,
+        CASE
+            WHEN superficie_total   > 0 THEN ROUND(precio / superficie_total,   2)
+            WHEN superficie_cubierta > 0 THEN ROUND(precio / superficie_cubierta, 2)
+        END                                         AS precio_por_m2,
+
+        -- ── Métricas de superficie ────────────────────────────
+        superficie_cubierta,
+        superficie_total,
+
+        -- ── Métricas de comisión ─────────────────────────────
+        -- La comisión varía por tipo de operación (lógica de negocio inmobiliario)
+        CASE operation_type
+            WHEN 'Venta'             THEN 0.03
+            WHEN 'Alquiler'          THEN 0.10
+            WHEN 'Alquiler temporal' THEN 0.15
+        END                                         AS porcentaje_comision,
+        ROUND(
+            precio * CASE operation_type
+                WHEN 'Venta'             THEN 0.03
+                WHEN 'Alquiler'          THEN 0.10
+                WHEN 'Alquiler temporal' THEN 0.15
+            END, 2
+        )                                           AS ingreso_comision,
+
+        -- ── Métrica de tiempo de cierre ───────────────────────
+        -- CORRECCIÓN vs modelo 2021: calculado aquí como medida,
+        -- no almacenado como par de FKs sin utilidad analítica
+        CASE
+            WHEN fecha_baja IS NOT NULL AND fecha_baja >= fecha_alta
+            THEN DATE_DIFF('day', fecha_alta, fecha_baja)
+        END                                         AS dias_publicacion,
+
+        -- ── Flag operación cerrada ────────────────────────────
+        CASE WHEN fecha_baja IS NOT NULL THEN 1 ELSE 0
+        END                                         AS es_operacion_cerrada,
+
+        -- ── Metadatos ─────────────────────────────────────────
+        _loaded_at
+
+    FROM base
+)
+
+SELECT * FROM with_metrics
+    );
+  
+  
+[0m11:57:29.330759 [debug] [Thread-1 (]: SQL status: OK in 1.682 seconds
+[0m11:57:29.330759 [debug] [Thread-1 (]: Using duckdb connection "model.real_estate_analytics.fact_publicaciones"
+[0m11:57:29.330759 [debug] [Thread-1 (]: On model.real_estate_analytics.fact_publicaciones: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "model.real_estate_analytics.fact_publicaciones"} */
+alter table "real_estate"."main_marts"."fact_publicaciones__dbt_tmp" rename to "fact_publicaciones"
+[0m11:57:29.338380 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m11:57:29.340381 [debug] [Thread-1 (]: On model.real_estate_analytics.fact_publicaciones: COMMIT
+[0m11:57:29.340381 [debug] [Thread-1 (]: Using duckdb connection "model.real_estate_analytics.fact_publicaciones"
+[0m11:57:29.340381 [debug] [Thread-1 (]: On model.real_estate_analytics.fact_publicaciones: COMMIT
+[0m11:57:29.908063 [debug] [Thread-1 (]: SQL status: OK in 0.561 seconds
+[0m11:57:29.909062 [debug] [Thread-1 (]: Using duckdb connection "model.real_estate_analytics.fact_publicaciones"
+[0m11:57:29.909062 [debug] [Thread-1 (]: On model.real_estate_analytics.fact_publicaciones: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "model.real_estate_analytics.fact_publicaciones"} */
+drop table if exists "real_estate"."main_marts"."fact_publicaciones__dbt_backup" cascade
+[0m11:57:29.913161 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m11:57:29.914161 [debug] [Thread-1 (]: On model.real_estate_analytics.fact_publicaciones: Close
+[0m11:57:29.918683 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ae7e2f7b-6b9d-4214-95fe-90017a28dc7b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFDBB0FC80>]}
+[0m11:57:29.918683 [info ] [Thread-1 (]: 2 of 4 OK created sql table model main_marts.fact_publicaciones ................ [[32mOK[0m in 2.31s]
+[0m11:57:29.929153 [debug] [Thread-1 (]: Finished running node model.real_estate_analytics.fact_publicaciones
+[0m11:57:29.930781 [debug] [Thread-1 (]: Began running node model.real_estate_analytics.mart_kpis_geo
+[0m11:57:29.930781 [info ] [Thread-1 (]: 3 of 4 START sql table model main_marts.mart_kpis_geo .......................... [RUN]
+[0m11:57:29.932002 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.real_estate_analytics.fact_publicaciones, now model.real_estate_analytics.mart_kpis_geo)
+[0m11:57:29.933036 [debug] [Thread-1 (]: Began compiling node model.real_estate_analytics.mart_kpis_geo
+[0m11:57:29.935034 [debug] [Thread-1 (]: Writing injected SQL for node "model.real_estate_analytics.mart_kpis_geo"
+[0m11:57:29.936786 [debug] [Thread-1 (]: Began executing node model.real_estate_analytics.mart_kpis_geo
+[0m11:57:29.937786 [debug] [Thread-1 (]: Writing runtime sql for node "model.real_estate_analytics.mart_kpis_geo"
+[0m11:57:29.941354 [debug] [Thread-1 (]: Using duckdb connection "model.real_estate_analytics.mart_kpis_geo"
+[0m11:57:29.942354 [debug] [Thread-1 (]: On model.real_estate_analytics.mart_kpis_geo: BEGIN
+[0m11:57:29.943044 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:57:29.950505 [debug] [Thread-1 (]: SQL status: OK in 0.007 seconds
+[0m11:57:29.950505 [debug] [Thread-1 (]: Using duckdb connection "model.real_estate_analytics.mart_kpis_geo"
+[0m11:57:29.951504 [debug] [Thread-1 (]: On model.real_estate_analytics.mart_kpis_geo: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "model.real_estate_analytics.mart_kpis_geo"} */
+
+  
+    
+    
+
+    create  table
+      "real_estate"."main_marts"."mart_kpis_geo__dbt_tmp"
+  
+    as (
+      -- models/marts/mart_kpis_geo.sql
+-- ================================
+-- KPIs geográficos agregados para el dashboard de Tableau.
+--
+-- Este modelo responde directamente los requerimientos
+-- de la gerencia de Ventas y Marketing del trabajo práctico:
+--   → Zonas geográficas con mayor ganancia por tipo de operación
+--   → Tiempo de cierre por zona
+--   → Precio por m² por provincia y ciudad
+
+SELECT
+    provincia,
+    ciudad,
+    operation_type,
+    currency,
+
+    -- Volumen
+    COUNT(*)                                    AS cant_publicaciones,
+    SUM(es_operacion_cerrada)                   AS cant_cerradas,
+    ROUND(
+        SUM(es_operacion_cerrada) * 100.0 / COUNT(*), 1
+    )                                           AS tasa_cierre_pct,
+
+    -- Precios
+    ROUND(AVG(precio), 2)                       AS precio_promedio,
+    ROUND(MEDIAN(precio), 2)                    AS precio_mediana,
+    ROUND(AVG(precio_por_m2), 2)                AS precio_m2_promedio,
+
+    -- Comisiones
+    ROUND(SUM(ingreso_comision), 2)             AS total_comision,
+    ROUND(AVG(ingreso_comision), 2)             AS comision_promedio,
+
+    -- Tiempo de cierre
+    ROUND(AVG(dias_publicacion), 1)             AS promedio_dias_cierre,
+    ROUND(MEDIAN(dias_publicacion), 1)          AS mediana_dias_cierre,
+
+    -- Superficie
+    ROUND(AVG(superficie_cubierta), 1)          AS sup_cubierta_promedio,
+    ROUND(AVG(superficie_total), 1)             AS sup_total_promedio
+
+FROM "real_estate"."main_marts"."fact_publicaciones"
+GROUP BY provincia, ciudad, operation_type, currency
+    );
+  
+  
+[0m11:57:30.057587 [debug] [Thread-1 (]: SQL status: OK in 0.106 seconds
+[0m11:57:30.057587 [debug] [Thread-1 (]: Using duckdb connection "model.real_estate_analytics.mart_kpis_geo"
+[0m11:57:30.057587 [debug] [Thread-1 (]: On model.real_estate_analytics.mart_kpis_geo: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "model.real_estate_analytics.mart_kpis_geo"} */
+alter table "real_estate"."main_marts"."mart_kpis_geo__dbt_tmp" rename to "mart_kpis_geo"
+[0m11:57:30.063994 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m11:57:30.065994 [debug] [Thread-1 (]: On model.real_estate_analytics.mart_kpis_geo: COMMIT
+[0m11:57:30.065994 [debug] [Thread-1 (]: Using duckdb connection "model.real_estate_analytics.mart_kpis_geo"
+[0m11:57:30.068626 [debug] [Thread-1 (]: On model.real_estate_analytics.mart_kpis_geo: COMMIT
+[0m11:57:30.076869 [debug] [Thread-1 (]: SQL status: OK in 0.007 seconds
+[0m11:57:30.081643 [debug] [Thread-1 (]: Using duckdb connection "model.real_estate_analytics.mart_kpis_geo"
+[0m11:57:30.081643 [debug] [Thread-1 (]: On model.real_estate_analytics.mart_kpis_geo: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "model.real_estate_analytics.mart_kpis_geo"} */
+drop table if exists "real_estate"."main_marts"."mart_kpis_geo__dbt_backup" cascade
+[0m11:57:30.084308 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m11:57:30.086312 [debug] [Thread-1 (]: On model.real_estate_analytics.mart_kpis_geo: Close
+[0m11:57:30.572233 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ae7e2f7b-6b9d-4214-95fe-90017a28dc7b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFEF766F30>]}
+[0m11:57:30.572233 [info ] [Thread-1 (]: 3 of 4 OK created sql table model main_marts.mart_kpis_geo ..................... [[32mOK[0m in 0.64s]
+[0m11:57:30.576462 [debug] [Thread-1 (]: Finished running node model.real_estate_analytics.mart_kpis_geo
+[0m11:57:30.577466 [debug] [Thread-1 (]: Began running node model.real_estate_analytics.mart_kpis_tiempo
+[0m11:57:30.577622 [info ] [Thread-1 (]: 4 of 4 START sql table model main_marts.mart_kpis_tiempo ....................... [RUN]
+[0m11:57:30.578625 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.real_estate_analytics.mart_kpis_geo, now model.real_estate_analytics.mart_kpis_tiempo)
+[0m11:57:30.579624 [debug] [Thread-1 (]: Began compiling node model.real_estate_analytics.mart_kpis_tiempo
+[0m11:57:30.580661 [debug] [Thread-1 (]: Writing injected SQL for node "model.real_estate_analytics.mart_kpis_tiempo"
+[0m11:57:30.584259 [debug] [Thread-1 (]: Began executing node model.real_estate_analytics.mart_kpis_tiempo
+[0m11:57:30.586296 [debug] [Thread-1 (]: Writing runtime sql for node "model.real_estate_analytics.mart_kpis_tiempo"
+[0m11:57:30.589933 [debug] [Thread-1 (]: Using duckdb connection "model.real_estate_analytics.mart_kpis_tiempo"
+[0m11:57:30.589933 [debug] [Thread-1 (]: On model.real_estate_analytics.mart_kpis_tiempo: BEGIN
+[0m11:57:30.590973 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:57:30.599913 [debug] [Thread-1 (]: SQL status: OK in 0.009 seconds
+[0m11:57:30.600948 [debug] [Thread-1 (]: Using duckdb connection "model.real_estate_analytics.mart_kpis_tiempo"
+[0m11:57:30.602246 [debug] [Thread-1 (]: On model.real_estate_analytics.mart_kpis_tiempo: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "model.real_estate_analytics.mart_kpis_tiempo"} */
+
+  
+    
+    
+
+    create  table
+      "real_estate"."main_marts"."mart_kpis_tiempo__dbt_tmp"
+  
+    as (
+      -- models/marts/mart_kpis_tiempo.sql
+-- ====================================
+-- Serie temporal mensual para el dashboard de Tableau.
+-- Responde: evolución de publicaciones, comisiones e ingresos por mes.
+
+SELECT
+    anio,
+    mes,
+    nombre_mes,
+    -- Columna auxiliar para ordenar correctamente en Tableau
+    -- sin depender del nombre del mes (que es string)
+    MAKE_DATE(anio, mes, 1)                     AS periodo,
+    operation_type,
+    currency,
+
+    COUNT(*)                                    AS cant_publicaciones,
+    SUM(es_operacion_cerrada)                   AS cant_cerradas,
+    ROUND(SUM(ingreso_comision), 2)             AS total_comision,
+    ROUND(AVG(precio), 2)                       AS precio_promedio,
+    ROUND(AVG(dias_publicacion), 1)             AS promedio_dias_cierre
+
+FROM "real_estate"."main_marts"."fact_publicaciones"
+GROUP BY anio, mes, nombre_mes, operation_type, currency
+ORDER BY anio, mes
+    );
+  
+  
+[0m11:57:30.644922 [debug] [Thread-1 (]: SQL status: OK in 0.042 seconds
+[0m11:57:30.650307 [debug] [Thread-1 (]: Using duckdb connection "model.real_estate_analytics.mart_kpis_tiempo"
+[0m11:57:30.650307 [debug] [Thread-1 (]: On model.real_estate_analytics.mart_kpis_tiempo: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "model.real_estate_analytics.mart_kpis_tiempo"} */
+alter table "real_estate"."main_marts"."mart_kpis_tiempo__dbt_tmp" rename to "mart_kpis_tiempo"
+[0m11:57:30.652199 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m11:57:30.655424 [debug] [Thread-1 (]: On model.real_estate_analytics.mart_kpis_tiempo: COMMIT
+[0m11:57:30.656028 [debug] [Thread-1 (]: Using duckdb connection "model.real_estate_analytics.mart_kpis_tiempo"
+[0m11:57:30.657060 [debug] [Thread-1 (]: On model.real_estate_analytics.mart_kpis_tiempo: COMMIT
+[0m11:57:30.661044 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m11:57:30.665000 [debug] [Thread-1 (]: Using duckdb connection "model.real_estate_analytics.mart_kpis_tiempo"
+[0m11:57:30.665000 [debug] [Thread-1 (]: On model.real_estate_analytics.mart_kpis_tiempo: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "model.real_estate_analytics.mart_kpis_tiempo"} */
+drop table if exists "real_estate"."main_marts"."mart_kpis_tiempo__dbt_backup" cascade
+[0m11:57:30.667103 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m11:57:30.668141 [debug] [Thread-1 (]: On model.real_estate_analytics.mart_kpis_tiempo: Close
+[0m11:57:30.708181 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ae7e2f7b-6b9d-4214-95fe-90017a28dc7b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFDBA17C80>]}
+[0m11:57:30.709230 [info ] [Thread-1 (]: 4 of 4 OK created sql table model main_marts.mart_kpis_tiempo .................. [[32mOK[0m in 0.13s]
+[0m11:57:30.711225 [debug] [Thread-1 (]: Finished running node model.real_estate_analytics.mart_kpis_tiempo
+[0m11:57:30.715075 [debug] [MainThread]: Using duckdb connection "master"
+[0m11:57:30.716079 [debug] [MainThread]: On master: BEGIN
+[0m11:57:30.717379 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m11:57:30.735954 [debug] [MainThread]: SQL status: OK in 0.018 seconds
+[0m11:57:30.736958 [debug] [MainThread]: On master: COMMIT
+[0m11:57:30.736958 [debug] [MainThread]: Using duckdb connection "master"
+[0m11:57:30.741909 [debug] [MainThread]: On master: COMMIT
+[0m11:57:30.744537 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m11:57:30.746293 [debug] [MainThread]: On master: Close
+[0m11:57:30.752148 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:57:30.752148 [debug] [MainThread]: Connection 'create_real_estate_main_staging' was properly closed.
+[0m11:57:30.757098 [debug] [MainThread]: Connection 'list_real_estate_main_staging' was properly closed.
+[0m11:57:30.757098 [debug] [MainThread]: Connection 'model.real_estate_analytics.mart_kpis_tiempo' was properly closed.
+[0m11:57:30.757098 [info ] [MainThread]: 
+[0m11:57:30.763965 [info ] [MainThread]: Finished running 1 view model, 3 table models in 0 hours 0 minutes and 4.37 seconds (4.37s).
+[0m11:57:30.769866 [debug] [MainThread]: Command end result
+[0m11:57:30.902784 [info ] [MainThread]: 
+[0m11:57:30.905096 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m11:57:30.909612 [info ] [MainThread]: 
+[0m11:57:30.911733 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 TOTAL=4
+[0m11:57:30.922269 [debug] [MainThread]: Command `dbt run` succeeded at 11:57:30.922269 after 9.06 seconds
+[0m11:57:30.922269 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFD9CF6D50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFD9CF7A70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FFD9CF5AC0>]}
+[0m11:57:30.922269 [debug] [MainThread]: Flushing usage events
+[0m11:58:35.996670 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E73A372E40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E73A373080>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E73656B770>]}
+
+
+============================== 11:58:36.010076 | 8a00da0f-53e5-4446-b200-dfb7faf389de ==============================
+[0m11:58:36.010076 [info ] [MainThread]: Running with dbt=1.8.0
+[0m11:58:36.013591 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '.', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'C:\\Users\\ivana\\real_estate_argentina_analytics\\dbt_realestate\\logs', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt test --profiles-dir .', 'send_anonymous_usage_stats': 'True'}
+[0m11:58:36.330854 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '8a00da0f-53e5-4446-b200-dfb7faf389de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E73AD85700>]}
+[0m11:58:36.424604 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '8a00da0f-53e5-4446-b200-dfb7faf389de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E73A8AC110>]}
+[0m11:58:36.424604 [info ] [MainThread]: Registered adapter: duckdb=1.8.0
+[0m11:58:36.754783 [debug] [MainThread]: checksum: dbb12d416fdb55e3665e4828703bbedf40c5c90ed7ca6ff39bbbfb29b12b0a92, vars: {}, profile: , target: , version: 1.8.0
+[0m11:58:36.980182 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m11:58:36.980182 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m11:58:37.040365 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8a00da0f-53e5-4446-b200-dfb7faf389de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E73BF9DFA0>]}
+[0m11:58:37.320354 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8a00da0f-53e5-4446-b200-dfb7faf389de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E73C376E70>]}
+[0m11:58:37.320856 [info ] [MainThread]: Found 4 models, 11 data tests, 421 macros
+[0m11:58:37.321856 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8a00da0f-53e5-4446-b200-dfb7faf389de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E73ACB0890>]}
+[0m11:58:37.322858 [info ] [MainThread]: 
+[0m11:58:37.326790 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m11:58:37.336142 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_real_estate_main_staging'
+[0m11:58:37.521605 [debug] [ThreadPool]: Using duckdb connection "list_real_estate_main_staging"
+[0m11:58:37.521605 [debug] [ThreadPool]: On list_real_estate_main_staging: BEGIN
+[0m11:58:37.523622 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:58:37.534903 [debug] [ThreadPool]: SQL status: OK in 0.011 seconds
+[0m11:58:37.535903 [debug] [ThreadPool]: Using duckdb connection "list_real_estate_main_staging"
+[0m11:58:37.535903 [debug] [ThreadPool]: On list_real_estate_main_staging: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "connection_name": "list_real_estate_main_staging"} */
+select
+      'real_estate' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'main_staging'
+    and table_catalog = 'real_estate'
+  
+[0m11:58:37.580049 [debug] [ThreadPool]: SQL status: OK in 0.043 seconds
+[0m11:58:37.582269 [debug] [ThreadPool]: On list_real_estate_main_staging: ROLLBACK
+[0m11:58:37.626891 [debug] [ThreadPool]: Failed to rollback 'list_real_estate_main_staging'
+[0m11:58:37.627893 [debug] [ThreadPool]: On list_real_estate_main_staging: Close
+[0m11:58:37.632693 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_real_estate_main_staging, now list_real_estate_main_marts)
+[0m11:58:37.636362 [debug] [ThreadPool]: Using duckdb connection "list_real_estate_main_marts"
+[0m11:58:37.638469 [debug] [ThreadPool]: On list_real_estate_main_marts: BEGIN
+[0m11:58:37.643320 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m11:58:37.656074 [debug] [ThreadPool]: SQL status: OK in 0.013 seconds
+[0m11:58:37.657077 [debug] [ThreadPool]: Using duckdb connection "list_real_estate_main_marts"
+[0m11:58:37.661259 [debug] [ThreadPool]: On list_real_estate_main_marts: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "connection_name": "list_real_estate_main_marts"} */
+select
+      'real_estate' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'main_marts'
+    and table_catalog = 'real_estate'
+  
+[0m11:58:37.699122 [debug] [ThreadPool]: SQL status: OK in 0.034 seconds
+[0m11:58:37.710257 [debug] [ThreadPool]: On list_real_estate_main_marts: ROLLBACK
+[0m11:58:37.711392 [debug] [ThreadPool]: Failed to rollback 'list_real_estate_main_marts'
+[0m11:58:37.716150 [debug] [ThreadPool]: On list_real_estate_main_marts: Close
+[0m11:58:37.723602 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '8a00da0f-53e5-4446-b200-dfb7faf389de', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E73AF398E0>]}
+[0m11:58:37.724602 [debug] [MainThread]: Using duckdb connection "master"
+[0m11:58:37.726837 [debug] [MainThread]: On master: BEGIN
+[0m11:58:37.732077 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:58:37.744607 [debug] [MainThread]: SQL status: OK in 0.012 seconds
+[0m11:58:37.745608 [debug] [MainThread]: On master: COMMIT
+[0m11:58:37.751378 [debug] [MainThread]: Using duckdb connection "master"
+[0m11:58:37.756935 [debug] [MainThread]: On master: COMMIT
+[0m11:58:37.761716 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m11:58:37.763718 [debug] [MainThread]: On master: Close
+[0m11:58:37.772542 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m11:58:37.789235 [info ] [MainThread]: 
+[0m11:58:37.796276 [debug] [Thread-1 (]: Began running node test.real_estate_analytics.accepted_values_stg_properties_currency__ARS__USD.207a856ea7
+[0m11:58:37.798297 [info ] [Thread-1 (]: 1 of 11 START test accepted_values_stg_properties_currency__ARS__USD ........... [RUN]
+[0m11:58:37.802168 [debug] [Thread-1 (]: Acquiring new duckdb connection 'test.real_estate_analytics.accepted_values_stg_properties_currency__ARS__USD.207a856ea7'
+[0m11:58:37.806034 [debug] [Thread-1 (]: Began compiling node test.real_estate_analytics.accepted_values_stg_properties_currency__ARS__USD.207a856ea7
+[0m11:58:37.829442 [debug] [Thread-1 (]: Writing injected SQL for node "test.real_estate_analytics.accepted_values_stg_properties_currency__ARS__USD.207a856ea7"
+[0m11:58:37.834402 [debug] [Thread-1 (]: Began executing node test.real_estate_analytics.accepted_values_stg_properties_currency__ARS__USD.207a856ea7
+[0m11:58:37.855387 [debug] [Thread-1 (]: Writing runtime sql for node "test.real_estate_analytics.accepted_values_stg_properties_currency__ARS__USD.207a856ea7"
+[0m11:58:37.858335 [debug] [Thread-1 (]: Using duckdb connection "test.real_estate_analytics.accepted_values_stg_properties_currency__ARS__USD.207a856ea7"
+[0m11:58:37.862221 [debug] [Thread-1 (]: On test.real_estate_analytics.accepted_values_stg_properties_currency__ARS__USD.207a856ea7: BEGIN
+[0m11:58:37.866079 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m11:58:37.876884 [debug] [Thread-1 (]: SQL status: OK in 0.011 seconds
+[0m11:58:37.878837 [debug] [Thread-1 (]: Using duckdb connection "test.real_estate_analytics.accepted_values_stg_properties_currency__ARS__USD.207a856ea7"
+[0m11:58:37.883303 [debug] [Thread-1 (]: On test.real_estate_analytics.accepted_values_stg_properties_currency__ARS__USD.207a856ea7: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "test.real_estate_analytics.accepted_values_stg_properties_currency__ARS__USD.207a856ea7"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        currency as value_field,
+        count(*) as n_records
+
+    from "real_estate"."main_staging"."stg_properties"
+    group by currency
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'ARS','USD'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m11:58:37.999012 [debug] [Thread-1 (]: SQL status: OK in 0.111 seconds
+[0m11:58:38.007331 [debug] [Thread-1 (]: On test.real_estate_analytics.accepted_values_stg_properties_currency__ARS__USD.207a856ea7: ROLLBACK
+[0m11:58:38.010012 [debug] [Thread-1 (]: Failed to rollback 'test.real_estate_analytics.accepted_values_stg_properties_currency__ARS__USD.207a856ea7'
+[0m11:58:38.014321 [debug] [Thread-1 (]: On test.real_estate_analytics.accepted_values_stg_properties_currency__ARS__USD.207a856ea7: Close
+[0m11:58:38.024715 [info ] [Thread-1 (]: 1 of 11 PASS accepted_values_stg_properties_currency__ARS__USD ................. [[32mPASS[0m in 0.22s]
+[0m11:58:38.026257 [debug] [Thread-1 (]: Finished running node test.real_estate_analytics.accepted_values_stg_properties_currency__ARS__USD.207a856ea7
+[0m11:58:38.032369 [debug] [Thread-1 (]: Began running node test.real_estate_analytics.accepted_values_stg_properties_operation_type__Venta__Alquiler__Alquiler_temporal.68783d3e71
+[0m11:58:38.036110 [info ] [Thread-1 (]: 2 of 11 START test accepted_values_stg_properties_operation_type__Venta__Alquiler__Alquiler_temporal  [RUN]
+[0m11:58:38.039109 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.real_estate_analytics.accepted_values_stg_properties_currency__ARS__USD.207a856ea7, now test.real_estate_analytics.accepted_values_stg_properties_operation_type__Venta__Alquiler__Alquiler_temporal.68783d3e71)
+[0m11:58:38.043933 [debug] [Thread-1 (]: Began compiling node test.real_estate_analytics.accepted_values_stg_properties_operation_type__Venta__Alquiler__Alquiler_temporal.68783d3e71
+[0m11:58:38.054309 [debug] [Thread-1 (]: Writing injected SQL for node "test.real_estate_analytics.accepted_values_stg_properties_operation_type__Venta__Alquiler__Alquiler_temporal.68783d3e71"
+[0m11:58:38.056306 [debug] [Thread-1 (]: Began executing node test.real_estate_analytics.accepted_values_stg_properties_operation_type__Venta__Alquiler__Alquiler_temporal.68783d3e71
+[0m11:58:38.059874 [debug] [Thread-1 (]: Writing runtime sql for node "test.real_estate_analytics.accepted_values_stg_properties_operation_type__Venta__Alquiler__Alquiler_temporal.68783d3e71"
+[0m11:58:38.060922 [debug] [Thread-1 (]: Using duckdb connection "test.real_estate_analytics.accepted_values_stg_properties_operation_type__Venta__Alquiler__Alquiler_temporal.68783d3e71"
+[0m11:58:38.062395 [debug] [Thread-1 (]: On test.real_estate_analytics.accepted_values_stg_properties_operation_type__Venta__Alquiler__Alquiler_temporal.68783d3e71: BEGIN
+[0m11:58:38.087643 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:58:38.105657 [debug] [Thread-1 (]: SQL status: OK in 0.018 seconds
+[0m11:58:38.109501 [debug] [Thread-1 (]: Using duckdb connection "test.real_estate_analytics.accepted_values_stg_properties_operation_type__Venta__Alquiler__Alquiler_temporal.68783d3e71"
+[0m11:58:38.111450 [debug] [Thread-1 (]: On test.real_estate_analytics.accepted_values_stg_properties_operation_type__Venta__Alquiler__Alquiler_temporal.68783d3e71: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "test.real_estate_analytics.accepted_values_stg_properties_operation_type__Venta__Alquiler__Alquiler_temporal.68783d3e71"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        operation_type as value_field,
+        count(*) as n_records
+
+    from "real_estate"."main_staging"."stg_properties"
+    group by operation_type
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'Venta','Alquiler','Alquiler temporal'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m11:58:38.247789 [debug] [Thread-1 (]: SQL status: OK in 0.134 seconds
+[0m11:58:38.250034 [debug] [Thread-1 (]: On test.real_estate_analytics.accepted_values_stg_properties_operation_type__Venta__Alquiler__Alquiler_temporal.68783d3e71: ROLLBACK
+[0m11:58:38.250034 [debug] [Thread-1 (]: Failed to rollback 'test.real_estate_analytics.accepted_values_stg_properties_operation_type__Venta__Alquiler__Alquiler_temporal.68783d3e71'
+[0m11:58:38.250034 [debug] [Thread-1 (]: On test.real_estate_analytics.accepted_values_stg_properties_operation_type__Venta__Alquiler__Alquiler_temporal.68783d3e71: Close
+[0m11:58:38.255875 [info ] [Thread-1 (]: 2 of 11 PASS accepted_values_stg_properties_operation_type__Venta__Alquiler__Alquiler_temporal  [[32mPASS[0m in 0.22s]
+[0m11:58:38.258005 [debug] [Thread-1 (]: Finished running node test.real_estate_analytics.accepted_values_stg_properties_operation_type__Venta__Alquiler__Alquiler_temporal.68783d3e71
+[0m11:58:38.259087 [debug] [Thread-1 (]: Began running node test.real_estate_analytics.not_null_fact_publicaciones_id_publicacion.5a5d0594dd
+[0m11:58:38.259087 [info ] [Thread-1 (]: 3 of 11 START test not_null_fact_publicaciones_id_publicacion .................. [RUN]
+[0m11:58:38.260266 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.real_estate_analytics.accepted_values_stg_properties_operation_type__Venta__Alquiler__Alquiler_temporal.68783d3e71, now test.real_estate_analytics.not_null_fact_publicaciones_id_publicacion.5a5d0594dd)
+[0m11:58:38.261266 [debug] [Thread-1 (]: Began compiling node test.real_estate_analytics.not_null_fact_publicaciones_id_publicacion.5a5d0594dd
+[0m11:58:38.262907 [debug] [Thread-1 (]: Writing injected SQL for node "test.real_estate_analytics.not_null_fact_publicaciones_id_publicacion.5a5d0594dd"
+[0m11:58:38.269395 [debug] [Thread-1 (]: Began executing node test.real_estate_analytics.not_null_fact_publicaciones_id_publicacion.5a5d0594dd
+[0m11:58:38.272397 [debug] [Thread-1 (]: Writing runtime sql for node "test.real_estate_analytics.not_null_fact_publicaciones_id_publicacion.5a5d0594dd"
+[0m11:58:38.275071 [debug] [Thread-1 (]: Using duckdb connection "test.real_estate_analytics.not_null_fact_publicaciones_id_publicacion.5a5d0594dd"
+[0m11:58:38.276072 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_fact_publicaciones_id_publicacion.5a5d0594dd: BEGIN
+[0m11:58:38.276072 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:58:38.285630 [debug] [Thread-1 (]: SQL status: OK in 0.009 seconds
+[0m11:58:38.285630 [debug] [Thread-1 (]: Using duckdb connection "test.real_estate_analytics.not_null_fact_publicaciones_id_publicacion.5a5d0594dd"
+[0m11:58:38.286665 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_fact_publicaciones_id_publicacion.5a5d0594dd: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "test.real_estate_analytics.not_null_fact_publicaciones_id_publicacion.5a5d0594dd"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select id_publicacion
+from "real_estate"."main_marts"."fact_publicaciones"
+where id_publicacion is null
+
+
+
+      
+    ) dbt_internal_test
+[0m11:58:38.288553 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m11:58:38.290581 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_fact_publicaciones_id_publicacion.5a5d0594dd: ROLLBACK
+[0m11:58:38.290581 [debug] [Thread-1 (]: Failed to rollback 'test.real_estate_analytics.not_null_fact_publicaciones_id_publicacion.5a5d0594dd'
+[0m11:58:38.290581 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_fact_publicaciones_id_publicacion.5a5d0594dd: Close
+[0m11:58:38.294747 [info ] [Thread-1 (]: 3 of 11 PASS not_null_fact_publicaciones_id_publicacion ........................ [[32mPASS[0m in 0.03s]
+[0m11:58:38.295750 [debug] [Thread-1 (]: Finished running node test.real_estate_analytics.not_null_fact_publicaciones_id_publicacion.5a5d0594dd
+[0m11:58:38.296749 [debug] [Thread-1 (]: Began running node test.real_estate_analytics.not_null_fact_publicaciones_precio.d15953a1b5
+[0m11:58:38.296749 [info ] [Thread-1 (]: 4 of 11 START test not_null_fact_publicaciones_precio .......................... [RUN]
+[0m11:58:38.297971 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.real_estate_analytics.not_null_fact_publicaciones_id_publicacion.5a5d0594dd, now test.real_estate_analytics.not_null_fact_publicaciones_precio.d15953a1b5)
+[0m11:58:38.299237 [debug] [Thread-1 (]: Began compiling node test.real_estate_analytics.not_null_fact_publicaciones_precio.d15953a1b5
+[0m11:58:38.303540 [debug] [Thread-1 (]: Writing injected SQL for node "test.real_estate_analytics.not_null_fact_publicaciones_precio.d15953a1b5"
+[0m11:58:38.305434 [debug] [Thread-1 (]: Began executing node test.real_estate_analytics.not_null_fact_publicaciones_precio.d15953a1b5
+[0m11:58:38.307628 [debug] [Thread-1 (]: Writing runtime sql for node "test.real_estate_analytics.not_null_fact_publicaciones_precio.d15953a1b5"
+[0m11:58:38.309131 [debug] [Thread-1 (]: Using duckdb connection "test.real_estate_analytics.not_null_fact_publicaciones_precio.d15953a1b5"
+[0m11:58:38.309131 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_fact_publicaciones_precio.d15953a1b5: BEGIN
+[0m11:58:38.310401 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:58:38.318783 [debug] [Thread-1 (]: SQL status: OK in 0.008 seconds
+[0m11:58:38.319795 [debug] [Thread-1 (]: Using duckdb connection "test.real_estate_analytics.not_null_fact_publicaciones_precio.d15953a1b5"
+[0m11:58:38.320932 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_fact_publicaciones_precio.d15953a1b5: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "test.real_estate_analytics.not_null_fact_publicaciones_precio.d15953a1b5"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select precio
+from "real_estate"."main_marts"."fact_publicaciones"
+where precio is null
+
+
+
+      
+    ) dbt_internal_test
+[0m11:58:38.321936 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m11:58:38.325936 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_fact_publicaciones_precio.d15953a1b5: ROLLBACK
+[0m11:58:38.328072 [debug] [Thread-1 (]: Failed to rollback 'test.real_estate_analytics.not_null_fact_publicaciones_precio.d15953a1b5'
+[0m11:58:38.328398 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_fact_publicaciones_precio.d15953a1b5: Close
+[0m11:58:38.331411 [info ] [Thread-1 (]: 4 of 11 PASS not_null_fact_publicaciones_precio ................................ [[32mPASS[0m in 0.03s]
+[0m11:58:38.332994 [debug] [Thread-1 (]: Finished running node test.real_estate_analytics.not_null_fact_publicaciones_precio.d15953a1b5
+[0m11:58:38.334385 [debug] [Thread-1 (]: Began running node test.real_estate_analytics.not_null_stg_properties_ciudad.5d3d3e1a02
+[0m11:58:38.335388 [info ] [Thread-1 (]: 5 of 11 START test not_null_stg_properties_ciudad .............................. [RUN]
+[0m11:58:38.340137 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.real_estate_analytics.not_null_fact_publicaciones_precio.d15953a1b5, now test.real_estate_analytics.not_null_stg_properties_ciudad.5d3d3e1a02)
+[0m11:58:38.340329 [debug] [Thread-1 (]: Began compiling node test.real_estate_analytics.not_null_stg_properties_ciudad.5d3d3e1a02
+[0m11:58:38.343842 [debug] [Thread-1 (]: Writing injected SQL for node "test.real_estate_analytics.not_null_stg_properties_ciudad.5d3d3e1a02"
+[0m11:58:38.347820 [debug] [Thread-1 (]: Began executing node test.real_estate_analytics.not_null_stg_properties_ciudad.5d3d3e1a02
+[0m11:58:38.376320 [debug] [Thread-1 (]: Writing runtime sql for node "test.real_estate_analytics.not_null_stg_properties_ciudad.5d3d3e1a02"
+[0m11:58:38.379928 [debug] [Thread-1 (]: Using duckdb connection "test.real_estate_analytics.not_null_stg_properties_ciudad.5d3d3e1a02"
+[0m11:58:38.406389 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_ciudad.5d3d3e1a02: BEGIN
+[0m11:58:38.407443 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:58:38.437309 [debug] [Thread-1 (]: SQL status: OK in 0.029 seconds
+[0m11:58:38.465548 [debug] [Thread-1 (]: Using duckdb connection "test.real_estate_analytics.not_null_stg_properties_ciudad.5d3d3e1a02"
+[0m11:58:38.481927 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_ciudad.5d3d3e1a02: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "test.real_estate_analytics.not_null_stg_properties_ciudad.5d3d3e1a02"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select ciudad
+from "real_estate"."main_staging"."stg_properties"
+where ciudad is null
+
+
+
+      
+    ) dbt_internal_test
+[0m11:58:38.664177 [debug] [Thread-1 (]: SQL status: OK in 0.158 seconds
+[0m11:58:38.666178 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_ciudad.5d3d3e1a02: ROLLBACK
+[0m11:58:38.667177 [debug] [Thread-1 (]: Failed to rollback 'test.real_estate_analytics.not_null_stg_properties_ciudad.5d3d3e1a02'
+[0m11:58:38.667177 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_ciudad.5d3d3e1a02: Close
+[0m11:58:38.671807 [error] [Thread-1 (]: 5 of 11 FAIL 49893 not_null_stg_properties_ciudad .............................. [[31mFAIL 49893[0m in 0.33s]
+[0m11:58:38.675500 [debug] [Thread-1 (]: Finished running node test.real_estate_analytics.not_null_stg_properties_ciudad.5d3d3e1a02
+[0m11:58:38.676847 [debug] [Thread-1 (]: Began running node test.real_estate_analytics.not_null_stg_properties_currency.654e6c38ac
+[0m11:58:38.677849 [info ] [Thread-1 (]: 6 of 11 START test not_null_stg_properties_currency ............................ [RUN]
+[0m11:58:38.678463 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.real_estate_analytics.not_null_stg_properties_ciudad.5d3d3e1a02, now test.real_estate_analytics.not_null_stg_properties_currency.654e6c38ac)
+[0m11:58:38.679465 [debug] [Thread-1 (]: Began compiling node test.real_estate_analytics.not_null_stg_properties_currency.654e6c38ac
+[0m11:58:38.683819 [debug] [Thread-1 (]: Writing injected SQL for node "test.real_estate_analytics.not_null_stg_properties_currency.654e6c38ac"
+[0m11:58:38.688914 [debug] [Thread-1 (]: Began executing node test.real_estate_analytics.not_null_stg_properties_currency.654e6c38ac
+[0m11:58:38.694935 [debug] [Thread-1 (]: Writing runtime sql for node "test.real_estate_analytics.not_null_stg_properties_currency.654e6c38ac"
+[0m11:58:38.697826 [debug] [Thread-1 (]: Using duckdb connection "test.real_estate_analytics.not_null_stg_properties_currency.654e6c38ac"
+[0m11:58:38.721974 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_currency.654e6c38ac: BEGIN
+[0m11:58:38.722981 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:58:38.739907 [debug] [Thread-1 (]: SQL status: OK in 0.016 seconds
+[0m11:58:38.741215 [debug] [Thread-1 (]: Using duckdb connection "test.real_estate_analytics.not_null_stg_properties_currency.654e6c38ac"
+[0m11:58:38.742957 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_currency.654e6c38ac: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "test.real_estate_analytics.not_null_stg_properties_currency.654e6c38ac"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select currency
+from "real_estate"."main_staging"."stg_properties"
+where currency is null
+
+
+
+      
+    ) dbt_internal_test
+[0m11:58:38.844025 [debug] [Thread-1 (]: SQL status: OK in 0.100 seconds
+[0m11:58:38.846443 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_currency.654e6c38ac: ROLLBACK
+[0m11:58:38.846443 [debug] [Thread-1 (]: Failed to rollback 'test.real_estate_analytics.not_null_stg_properties_currency.654e6c38ac'
+[0m11:58:38.846443 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_currency.654e6c38ac: Close
+[0m11:58:38.851375 [info ] [Thread-1 (]: 6 of 11 PASS not_null_stg_properties_currency .................................. [[32mPASS[0m in 0.17s]
+[0m11:58:38.853985 [debug] [Thread-1 (]: Finished running node test.real_estate_analytics.not_null_stg_properties_currency.654e6c38ac
+[0m11:58:38.854987 [debug] [Thread-1 (]: Began running node test.real_estate_analytics.not_null_stg_properties_fecha_alta.b6e7c720a1
+[0m11:58:38.855985 [info ] [Thread-1 (]: 7 of 11 START test not_null_stg_properties_fecha_alta .......................... [RUN]
+[0m11:58:38.858527 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.real_estate_analytics.not_null_stg_properties_currency.654e6c38ac, now test.real_estate_analytics.not_null_stg_properties_fecha_alta.b6e7c720a1)
+[0m11:58:38.859559 [debug] [Thread-1 (]: Began compiling node test.real_estate_analytics.not_null_stg_properties_fecha_alta.b6e7c720a1
+[0m11:58:38.859559 [debug] [Thread-1 (]: Writing injected SQL for node "test.real_estate_analytics.not_null_stg_properties_fecha_alta.b6e7c720a1"
+[0m11:58:38.865546 [debug] [Thread-1 (]: Began executing node test.real_estate_analytics.not_null_stg_properties_fecha_alta.b6e7c720a1
+[0m11:58:38.866578 [debug] [Thread-1 (]: Writing runtime sql for node "test.real_estate_analytics.not_null_stg_properties_fecha_alta.b6e7c720a1"
+[0m11:58:38.869077 [debug] [Thread-1 (]: Using duckdb connection "test.real_estate_analytics.not_null_stg_properties_fecha_alta.b6e7c720a1"
+[0m11:58:38.869077 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_fecha_alta.b6e7c720a1: BEGIN
+[0m11:58:38.870111 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:58:38.880249 [debug] [Thread-1 (]: SQL status: OK in 0.011 seconds
+[0m11:58:38.881277 [debug] [Thread-1 (]: Using duckdb connection "test.real_estate_analytics.not_null_stg_properties_fecha_alta.b6e7c720a1"
+[0m11:58:38.882278 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_fecha_alta.b6e7c720a1: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "test.real_estate_analytics.not_null_stg_properties_fecha_alta.b6e7c720a1"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select fecha_alta
+from "real_estate"."main_staging"."stg_properties"
+where fecha_alta is null
+
+
+
+      
+    ) dbt_internal_test
+[0m11:58:38.921920 [debug] [Thread-1 (]: SQL status: OK in 0.049 seconds
+[0m11:58:38.939563 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_fecha_alta.b6e7c720a1: ROLLBACK
+[0m11:58:38.945102 [debug] [Thread-1 (]: Failed to rollback 'test.real_estate_analytics.not_null_stg_properties_fecha_alta.b6e7c720a1'
+[0m11:58:38.946218 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_fecha_alta.b6e7c720a1: Close
+[0m11:58:38.949247 [info ] [Thread-1 (]: 7 of 11 PASS not_null_stg_properties_fecha_alta ................................ [[32mPASS[0m in 0.09s]
+[0m11:58:38.953219 [debug] [Thread-1 (]: Finished running node test.real_estate_analytics.not_null_stg_properties_fecha_alta.b6e7c720a1
+[0m11:58:38.954208 [debug] [Thread-1 (]: Began running node test.real_estate_analytics.not_null_stg_properties_operation_type.612cd751ff
+[0m11:58:38.955241 [info ] [Thread-1 (]: 8 of 11 START test not_null_stg_properties_operation_type ...................... [RUN]
+[0m11:58:38.962941 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.real_estate_analytics.not_null_stg_properties_fecha_alta.b6e7c720a1, now test.real_estate_analytics.not_null_stg_properties_operation_type.612cd751ff)
+[0m11:58:38.963948 [debug] [Thread-1 (]: Began compiling node test.real_estate_analytics.not_null_stg_properties_operation_type.612cd751ff
+[0m11:58:38.973330 [debug] [Thread-1 (]: Writing injected SQL for node "test.real_estate_analytics.not_null_stg_properties_operation_type.612cd751ff"
+[0m11:58:38.975770 [debug] [Thread-1 (]: Began executing node test.real_estate_analytics.not_null_stg_properties_operation_type.612cd751ff
+[0m11:58:38.976776 [debug] [Thread-1 (]: Writing runtime sql for node "test.real_estate_analytics.not_null_stg_properties_operation_type.612cd751ff"
+[0m11:58:38.982987 [debug] [Thread-1 (]: Using duckdb connection "test.real_estate_analytics.not_null_stg_properties_operation_type.612cd751ff"
+[0m11:58:38.983993 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_operation_type.612cd751ff: BEGIN
+[0m11:58:38.983993 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:58:39.004155 [debug] [Thread-1 (]: SQL status: OK in 0.018 seconds
+[0m11:58:39.005173 [debug] [Thread-1 (]: Using duckdb connection "test.real_estate_analytics.not_null_stg_properties_operation_type.612cd751ff"
+[0m11:58:39.007983 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_operation_type.612cd751ff: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "test.real_estate_analytics.not_null_stg_properties_operation_type.612cd751ff"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select operation_type
+from "real_estate"."main_staging"."stg_properties"
+where operation_type is null
+
+
+
+      
+    ) dbt_internal_test
+[0m11:58:39.099365 [debug] [Thread-1 (]: SQL status: OK in 0.090 seconds
+[0m11:58:39.101912 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_operation_type.612cd751ff: ROLLBACK
+[0m11:58:39.103035 [debug] [Thread-1 (]: Failed to rollback 'test.real_estate_analytics.not_null_stg_properties_operation_type.612cd751ff'
+[0m11:58:39.104036 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_operation_type.612cd751ff: Close
+[0m11:58:39.109318 [info ] [Thread-1 (]: 8 of 11 PASS not_null_stg_properties_operation_type ............................ [[32mPASS[0m in 0.15s]
+[0m11:58:39.111527 [debug] [Thread-1 (]: Finished running node test.real_estate_analytics.not_null_stg_properties_operation_type.612cd751ff
+[0m11:58:39.112529 [debug] [Thread-1 (]: Began running node test.real_estate_analytics.not_null_stg_properties_precio.7e8b70e03b
+[0m11:58:39.114083 [info ] [Thread-1 (]: 9 of 11 START test not_null_stg_properties_precio .............................. [RUN]
+[0m11:58:39.115332 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.real_estate_analytics.not_null_stg_properties_operation_type.612cd751ff, now test.real_estate_analytics.not_null_stg_properties_precio.7e8b70e03b)
+[0m11:58:39.116507 [debug] [Thread-1 (]: Began compiling node test.real_estate_analytics.not_null_stg_properties_precio.7e8b70e03b
+[0m11:58:39.123180 [debug] [Thread-1 (]: Writing injected SQL for node "test.real_estate_analytics.not_null_stg_properties_precio.7e8b70e03b"
+[0m11:58:39.125182 [debug] [Thread-1 (]: Began executing node test.real_estate_analytics.not_null_stg_properties_precio.7e8b70e03b
+[0m11:58:39.128872 [debug] [Thread-1 (]: Writing runtime sql for node "test.real_estate_analytics.not_null_stg_properties_precio.7e8b70e03b"
+[0m11:58:39.130873 [debug] [Thread-1 (]: Using duckdb connection "test.real_estate_analytics.not_null_stg_properties_precio.7e8b70e03b"
+[0m11:58:39.131537 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_precio.7e8b70e03b: BEGIN
+[0m11:58:39.132540 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:58:39.147046 [debug] [Thread-1 (]: SQL status: OK in 0.015 seconds
+[0m11:58:39.171887 [debug] [Thread-1 (]: Using duckdb connection "test.real_estate_analytics.not_null_stg_properties_precio.7e8b70e03b"
+[0m11:58:39.173655 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_precio.7e8b70e03b: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "test.real_estate_analytics.not_null_stg_properties_precio.7e8b70e03b"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select precio
+from "real_estate"."main_staging"."stg_properties"
+where precio is null
+
+
+
+      
+    ) dbt_internal_test
+[0m11:58:39.232801 [debug] [Thread-1 (]: SQL status: OK in 0.058 seconds
+[0m11:58:39.235800 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_precio.7e8b70e03b: ROLLBACK
+[0m11:58:39.237801 [debug] [Thread-1 (]: Failed to rollback 'test.real_estate_analytics.not_null_stg_properties_precio.7e8b70e03b'
+[0m11:58:39.238799 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_precio.7e8b70e03b: Close
+[0m11:58:39.245375 [info ] [Thread-1 (]: 9 of 11 PASS not_null_stg_properties_precio .................................... [[32mPASS[0m in 0.13s]
+[0m11:58:39.287761 [debug] [Thread-1 (]: Finished running node test.real_estate_analytics.not_null_stg_properties_precio.7e8b70e03b
+[0m11:58:39.289760 [debug] [Thread-1 (]: Began running node test.real_estate_analytics.not_null_stg_properties_provincia.f172b975e2
+[0m11:58:39.291761 [info ] [Thread-1 (]: 10 of 11 START test not_null_stg_properties_provincia .......................... [RUN]
+[0m11:58:39.294764 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.real_estate_analytics.not_null_stg_properties_precio.7e8b70e03b, now test.real_estate_analytics.not_null_stg_properties_provincia.f172b975e2)
+[0m11:58:39.299763 [debug] [Thread-1 (]: Began compiling node test.real_estate_analytics.not_null_stg_properties_provincia.f172b975e2
+[0m11:58:39.315271 [debug] [Thread-1 (]: Writing injected SQL for node "test.real_estate_analytics.not_null_stg_properties_provincia.f172b975e2"
+[0m11:58:39.336160 [debug] [Thread-1 (]: Began executing node test.real_estate_analytics.not_null_stg_properties_provincia.f172b975e2
+[0m11:58:39.342221 [debug] [Thread-1 (]: Writing runtime sql for node "test.real_estate_analytics.not_null_stg_properties_provincia.f172b975e2"
+[0m11:58:39.356915 [debug] [Thread-1 (]: Using duckdb connection "test.real_estate_analytics.not_null_stg_properties_provincia.f172b975e2"
+[0m11:58:39.358912 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_provincia.f172b975e2: BEGIN
+[0m11:58:39.361198 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:58:39.381023 [debug] [Thread-1 (]: SQL status: OK in 0.020 seconds
+[0m11:58:39.388963 [debug] [Thread-1 (]: Using duckdb connection "test.real_estate_analytics.not_null_stg_properties_provincia.f172b975e2"
+[0m11:58:39.393963 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_provincia.f172b975e2: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "test.real_estate_analytics.not_null_stg_properties_provincia.f172b975e2"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select provincia
+from "real_estate"."main_staging"."stg_properties"
+where provincia is null
+
+
+
+      
+    ) dbt_internal_test
+[0m11:58:39.560649 [debug] [Thread-1 (]: SQL status: OK in 0.163 seconds
+[0m11:58:39.608918 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_provincia.f172b975e2: ROLLBACK
+[0m11:58:39.632052 [debug] [Thread-1 (]: Failed to rollback 'test.real_estate_analytics.not_null_stg_properties_provincia.f172b975e2'
+[0m11:58:39.638207 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_provincia.f172b975e2: Close
+[0m11:58:39.652229 [info ] [Thread-1 (]: 10 of 11 PASS not_null_stg_properties_provincia ................................ [[32mPASS[0m in 0.36s]
+[0m11:58:39.658142 [debug] [Thread-1 (]: Finished running node test.real_estate_analytics.not_null_stg_properties_provincia.f172b975e2
+[0m11:58:39.662675 [debug] [Thread-1 (]: Began running node test.real_estate_analytics.unique_fact_publicaciones_id_publicacion.fc66e23103
+[0m11:58:39.667059 [info ] [Thread-1 (]: 11 of 11 START test unique_fact_publicaciones_id_publicacion ................... [RUN]
+[0m11:58:39.672721 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.real_estate_analytics.not_null_stg_properties_provincia.f172b975e2, now test.real_estate_analytics.unique_fact_publicaciones_id_publicacion.fc66e23103)
+[0m11:58:39.678722 [debug] [Thread-1 (]: Began compiling node test.real_estate_analytics.unique_fact_publicaciones_id_publicacion.fc66e23103
+[0m11:58:39.709433 [debug] [Thread-1 (]: Writing injected SQL for node "test.real_estate_analytics.unique_fact_publicaciones_id_publicacion.fc66e23103"
+[0m11:58:39.715050 [debug] [Thread-1 (]: Began executing node test.real_estate_analytics.unique_fact_publicaciones_id_publicacion.fc66e23103
+[0m11:58:39.729971 [debug] [Thread-1 (]: Writing runtime sql for node "test.real_estate_analytics.unique_fact_publicaciones_id_publicacion.fc66e23103"
+[0m11:58:39.759177 [debug] [Thread-1 (]: Using duckdb connection "test.real_estate_analytics.unique_fact_publicaciones_id_publicacion.fc66e23103"
+[0m11:58:39.761599 [debug] [Thread-1 (]: On test.real_estate_analytics.unique_fact_publicaciones_id_publicacion.fc66e23103: BEGIN
+[0m11:58:39.765356 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:58:39.795193 [debug] [Thread-1 (]: SQL status: OK in 0.030 seconds
+[0m11:58:39.797329 [debug] [Thread-1 (]: Using duckdb connection "test.real_estate_analytics.unique_fact_publicaciones_id_publicacion.fc66e23103"
+[0m11:58:39.801434 [debug] [Thread-1 (]: On test.real_estate_analytics.unique_fact_publicaciones_id_publicacion.fc66e23103: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "test.real_estate_analytics.unique_fact_publicaciones_id_publicacion.fc66e23103"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    id_publicacion as unique_field,
+    count(*) as n_records
+
+from "real_estate"."main_marts"."fact_publicaciones"
+where id_publicacion is not null
+group by id_publicacion
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m11:58:39.889765 [debug] [Thread-1 (]: SQL status: OK in 0.085 seconds
+[0m11:58:39.895215 [debug] [Thread-1 (]: On test.real_estate_analytics.unique_fact_publicaciones_id_publicacion.fc66e23103: ROLLBACK
+[0m11:58:39.898390 [debug] [Thread-1 (]: Failed to rollback 'test.real_estate_analytics.unique_fact_publicaciones_id_publicacion.fc66e23103'
+[0m11:58:39.924900 [debug] [Thread-1 (]: On test.real_estate_analytics.unique_fact_publicaciones_id_publicacion.fc66e23103: Close
+[0m11:58:39.932149 [info ] [Thread-1 (]: 11 of 11 PASS unique_fact_publicaciones_id_publicacion ......................... [[32mPASS[0m in 0.26s]
+[0m11:58:39.935729 [debug] [Thread-1 (]: Finished running node test.real_estate_analytics.unique_fact_publicaciones_id_publicacion.fc66e23103
+[0m11:58:39.940729 [debug] [MainThread]: Using duckdb connection "master"
+[0m11:58:39.941734 [debug] [MainThread]: On master: BEGIN
+[0m11:58:39.944732 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m11:58:39.964432 [debug] [MainThread]: SQL status: OK in 0.020 seconds
+[0m11:58:39.966432 [debug] [MainThread]: On master: COMMIT
+[0m11:58:39.967432 [debug] [MainThread]: Using duckdb connection "master"
+[0m11:58:39.969431 [debug] [MainThread]: On master: COMMIT
+[0m11:58:39.972438 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m11:58:39.974430 [debug] [MainThread]: On master: Close
+[0m11:58:39.978672 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:58:39.980670 [debug] [MainThread]: Connection 'list_real_estate_main_marts' was properly closed.
+[0m11:58:39.981671 [debug] [MainThread]: Connection 'test.real_estate_analytics.unique_fact_publicaciones_id_publicacion.fc66e23103' was properly closed.
+[0m11:58:40.003339 [info ] [MainThread]: 
+[0m11:58:40.006039 [info ] [MainThread]: Finished running 11 data tests in 0 hours 0 minutes and 2.68 seconds (2.68s).
+[0m11:58:40.019512 [debug] [MainThread]: Command end result
+[0m11:58:40.209907 [info ] [MainThread]: 
+[0m11:58:40.212909 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m11:58:40.216911 [info ] [MainThread]: 
+[0m11:58:40.224075 [error] [MainThread]: [31mFailure in test not_null_stg_properties_ciudad (models\staging\schema.yml)[0m
+[0m11:58:40.227734 [error] [MainThread]:   Got 49893 results, configured to fail if != 0
+[0m11:58:40.228832 [info ] [MainThread]: 
+[0m11:58:40.236812 [info ] [MainThread]:   compiled code at target\compiled\real_estate_analytics\models\staging\schema.yml\not_null_stg_properties_ciudad.sql
+[0m11:58:40.238831 [info ] [MainThread]: 
+[0m11:58:40.240951 [info ] [MainThread]: Done. PASS=10 WARN=0 ERROR=1 SKIP=0 TOTAL=11
+[0m11:58:40.253366 [debug] [MainThread]: Command `dbt test` failed at 11:58:40.253366 after 4.66 seconds
+[0m11:58:40.254369 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E739D9C740>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E739D9CA40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E73BF75820>]}
+[0m11:58:40.257602 [debug] [MainThread]: Flushing usage events
+[0m12:02:43.683519 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E1EC1C1280>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E1EC1C2E40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E1EC1C3500>]}
+
+
+============================== 12:02:43.698165 | 2a8065bc-1f27-4940-892e-d3cdd3889471 ==============================
+[0m12:02:43.698165 [info ] [MainThread]: Running with dbt=1.8.0
+[0m12:02:43.701668 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'version_check': 'True', 'profiles_dir': '.', 'log_path': 'C:\\Users\\ivana\\real_estate_argentina_analytics\\dbt_realestate\\logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt run --profiles-dir .', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m12:02:44.043959 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '2a8065bc-1f27-4940-892e-d3cdd3889471', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E1EA059E80>]}
+[0m12:02:44.133102 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '2a8065bc-1f27-4940-892e-d3cdd3889471', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E1EB609430>]}
+[0m12:02:44.134302 [info ] [MainThread]: Registered adapter: duckdb=1.8.0
+[0m12:02:44.407332 [debug] [MainThread]: checksum: dbb12d416fdb55e3665e4828703bbedf40c5c90ed7ca6ff39bbbfb29b12b0a92, vars: {}, profile: , target: , version: 1.8.0
+[0m12:02:44.591652 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m12:02:44.591652 [debug] [MainThread]: Partial parsing: updated file: real_estate_analytics://models\staging\stg_properties.sql
+[0m12:02:44.917901 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `tests` config has been renamed to `data_tests`. Please see
+https://docs.getdbt.com/docs/build/data-tests#new-data_tests-syntax for more
+information.
+[0m12:02:44.920902 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '2a8065bc-1f27-4940-892e-d3cdd3889471', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E1EDDA41A0>]}
+[0m12:02:45.167095 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '2a8065bc-1f27-4940-892e-d3cdd3889471', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E1EDC7D430>]}
+[0m12:02:45.303050 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '2a8065bc-1f27-4940-892e-d3cdd3889471', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E1EDAD9610>]}
+[0m12:02:45.303050 [info ] [MainThread]: Found 4 models, 11 data tests, 421 macros
+[0m12:02:45.304598 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2a8065bc-1f27-4940-892e-d3cdd3889471', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E1EDE71F70>]}
+[0m12:02:45.307634 [info ] [MainThread]: 
+[0m12:02:45.307634 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m12:02:45.318492 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_real_estate'
+[0m12:02:45.434453 [debug] [ThreadPool]: Using duckdb connection "list_real_estate"
+[0m12:02:45.450096 [debug] [ThreadPool]: On list_real_estate: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "connection_name": "list_real_estate"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where catalog_name = '"real_estate"'
+    
+  
+  
+[0m12:02:45.452770 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:02:45.463525 [debug] [ThreadPool]: SQL status: OK in 0.011 seconds
+[0m12:02:45.465685 [debug] [ThreadPool]: On list_real_estate: Close
+[0m12:02:45.470337 [debug] [ThreadPool]: Using duckdb connection "list_real_estate"
+[0m12:02:45.471596 [debug] [ThreadPool]: On list_real_estate: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "connection_name": "list_real_estate"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where catalog_name = '"real_estate"'
+    
+  
+  
+[0m12:02:45.472602 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:02:45.481042 [debug] [ThreadPool]: SQL status: OK in 0.009 seconds
+[0m12:02:45.483045 [debug] [ThreadPool]: On list_real_estate: Close
+[0m12:02:45.485624 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_real_estate, now create_real_estate_main_staging)
+[0m12:02:45.487096 [debug] [ThreadPool]: Creating schema "database: "real_estate"
+schema: "main_staging"
+"
+[0m12:02:45.487096 [debug] [ThreadPool]: Using duckdb connection "create_real_estate_main_staging"
+[0m12:02:45.487096 [debug] [ThreadPool]: On create_real_estate_main_staging: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "connection_name": "create_real_estate_main_staging"} */
+
+    
+        select type from duckdb_databases()
+        where database_name='real_estate'
+        and type='sqlite'
+    
+  
+[0m12:02:45.494429 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:02:45.503085 [debug] [ThreadPool]: SQL status: OK in 0.009 seconds
+[0m12:02:45.504089 [debug] [ThreadPool]: Using duckdb connection "create_real_estate_main_staging"
+[0m12:02:45.504089 [debug] [ThreadPool]: On create_real_estate_main_staging: BEGIN
+[0m12:02:45.506019 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m12:02:45.506019 [debug] [ThreadPool]: Using duckdb connection "create_real_estate_main_staging"
+[0m12:02:45.507054 [debug] [ThreadPool]: On create_real_estate_main_staging: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "connection_name": "create_real_estate_main_staging"} */
+
+    
+    
+        create schema if not exists "real_estate"."main_staging"
+    
+[0m12:02:45.508258 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m12:02:45.509304 [debug] [ThreadPool]: On create_real_estate_main_staging: COMMIT
+[0m12:02:45.509304 [debug] [ThreadPool]: Using duckdb connection "create_real_estate_main_staging"
+[0m12:02:45.510333 [debug] [ThreadPool]: On create_real_estate_main_staging: COMMIT
+[0m12:02:45.510333 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m12:02:45.511375 [debug] [ThreadPool]: On create_real_estate_main_staging: Close
+[0m12:02:45.514276 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_real_estate_main_staging, now create_real_estate_main_marts)
+[0m12:02:45.514276 [debug] [ThreadPool]: Creating schema "database: "real_estate"
+schema: "main_marts"
+"
+[0m12:02:45.516538 [debug] [ThreadPool]: Using duckdb connection "create_real_estate_main_marts"
+[0m12:02:45.517588 [debug] [ThreadPool]: On create_real_estate_main_marts: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "connection_name": "create_real_estate_main_marts"} */
+
+    
+        select type from duckdb_databases()
+        where database_name='real_estate'
+        and type='sqlite'
+    
+  
+[0m12:02:45.518186 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:02:45.526988 [debug] [ThreadPool]: SQL status: OK in 0.009 seconds
+[0m12:02:45.528020 [debug] [ThreadPool]: Using duckdb connection "create_real_estate_main_marts"
+[0m12:02:45.528020 [debug] [ThreadPool]: On create_real_estate_main_marts: BEGIN
+[0m12:02:45.528020 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m12:02:45.531527 [debug] [ThreadPool]: Using duckdb connection "create_real_estate_main_marts"
+[0m12:02:45.531527 [debug] [ThreadPool]: On create_real_estate_main_marts: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "connection_name": "create_real_estate_main_marts"} */
+
+    
+    
+        create schema if not exists "real_estate"."main_marts"
+    
+[0m12:02:45.531527 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m12:02:45.531527 [debug] [ThreadPool]: On create_real_estate_main_marts: COMMIT
+[0m12:02:45.531527 [debug] [ThreadPool]: Using duckdb connection "create_real_estate_main_marts"
+[0m12:02:45.537684 [debug] [ThreadPool]: On create_real_estate_main_marts: COMMIT
+[0m12:02:45.539351 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m12:02:45.540389 [debug] [ThreadPool]: On create_real_estate_main_marts: Close
+[0m12:02:45.545749 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_real_estate_main_staging'
+[0m12:02:45.546750 [debug] [ThreadPool]: Using duckdb connection "list_real_estate_main_staging"
+[0m12:02:45.546750 [debug] [ThreadPool]: On list_real_estate_main_staging: BEGIN
+[0m12:02:45.546750 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:02:45.574417 [debug] [ThreadPool]: SQL status: OK in 0.015 seconds
+[0m12:02:45.575475 [debug] [ThreadPool]: Using duckdb connection "list_real_estate_main_staging"
+[0m12:02:45.576509 [debug] [ThreadPool]: On list_real_estate_main_staging: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "connection_name": "list_real_estate_main_staging"} */
+select
+      'real_estate' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'main_staging'
+    and table_catalog = 'real_estate'
+  
+[0m12:02:45.611247 [debug] [ThreadPool]: SQL status: OK in 0.034 seconds
+[0m12:02:45.612160 [debug] [ThreadPool]: On list_real_estate_main_staging: ROLLBACK
+[0m12:02:45.613198 [debug] [ThreadPool]: Failed to rollback 'list_real_estate_main_staging'
+[0m12:02:45.613198 [debug] [ThreadPool]: On list_real_estate_main_staging: Close
+[0m12:02:45.618140 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_real_estate_main_staging, now list_real_estate_main_marts)
+[0m12:02:45.619178 [debug] [ThreadPool]: Using duckdb connection "list_real_estate_main_marts"
+[0m12:02:45.619178 [debug] [ThreadPool]: On list_real_estate_main_marts: BEGIN
+[0m12:02:45.621704 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:02:45.628879 [debug] [ThreadPool]: SQL status: OK in 0.008 seconds
+[0m12:02:45.629914 [debug] [ThreadPool]: Using duckdb connection "list_real_estate_main_marts"
+[0m12:02:45.630877 [debug] [ThreadPool]: On list_real_estate_main_marts: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "connection_name": "list_real_estate_main_marts"} */
+select
+      'real_estate' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'main_marts'
+    and table_catalog = 'real_estate'
+  
+[0m12:02:45.656391 [debug] [ThreadPool]: SQL status: OK in 0.025 seconds
+[0m12:02:45.658617 [debug] [ThreadPool]: On list_real_estate_main_marts: ROLLBACK
+[0m12:02:45.658617 [debug] [ThreadPool]: Failed to rollback 'list_real_estate_main_marts'
+[0m12:02:45.658617 [debug] [ThreadPool]: On list_real_estate_main_marts: Close
+[0m12:02:45.668419 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '2a8065bc-1f27-4940-892e-d3cdd3889471', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E1EE3394F0>]}
+[0m12:02:45.668419 [debug] [MainThread]: Using duckdb connection "master"
+[0m12:02:45.669404 [debug] [MainThread]: On master: BEGIN
+[0m12:02:45.670463 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m12:02:45.678283 [debug] [MainThread]: SQL status: OK in 0.008 seconds
+[0m12:02:45.679279 [debug] [MainThread]: On master: COMMIT
+[0m12:02:45.679279 [debug] [MainThread]: Using duckdb connection "master"
+[0m12:02:45.680316 [debug] [MainThread]: On master: COMMIT
+[0m12:02:45.681119 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m12:02:45.681119 [debug] [MainThread]: On master: Close
+[0m12:02:45.684158 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m12:02:45.685093 [info ] [MainThread]: 
+[0m12:02:45.688813 [debug] [Thread-1 (]: Began running node model.real_estate_analytics.stg_properties
+[0m12:02:45.689813 [info ] [Thread-1 (]: 1 of 4 START sql view model main_staging.stg_properties ........................ [RUN]
+[0m12:02:45.691153 [debug] [Thread-1 (]: Acquiring new duckdb connection 'model.real_estate_analytics.stg_properties'
+[0m12:02:45.691153 [debug] [Thread-1 (]: Began compiling node model.real_estate_analytics.stg_properties
+[0m12:02:45.693748 [debug] [Thread-1 (]: Writing injected SQL for node "model.real_estate_analytics.stg_properties"
+[0m12:02:45.701154 [debug] [Thread-1 (]: Began executing node model.real_estate_analytics.stg_properties
+[0m12:02:45.773788 [debug] [Thread-1 (]: Writing runtime sql for node "model.real_estate_analytics.stg_properties"
+[0m12:02:45.780371 [debug] [Thread-1 (]: Using duckdb connection "model.real_estate_analytics.stg_properties"
+[0m12:02:45.781424 [debug] [Thread-1 (]: On model.real_estate_analytics.stg_properties: BEGIN
+[0m12:02:45.781424 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m12:02:45.799519 [debug] [Thread-1 (]: SQL status: OK in 0.016 seconds
+[0m12:02:45.800521 [debug] [Thread-1 (]: Using duckdb connection "model.real_estate_analytics.stg_properties"
+[0m12:02:45.800521 [debug] [Thread-1 (]: On model.real_estate_analytics.stg_properties: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "model.real_estate_analytics.stg_properties"} */
+
+  
+  create view "real_estate"."main_staging"."stg_properties__dbt_tmp" as (
+    -- models/staging/stg_properties.sql
+-- ===================================
+-- Modelo STAGING: limpieza y tipado de la tabla cruda.
+--
+-- Responsabilidades de staging:
+--   ✓ Renombrar columnas a nombres claros
+--   ✓ Castear tipos de datos correctos
+--   ✓ Filtrar filas inválidas (precio nulo, fechas inválidas)
+--   ✓ Normalizar strings (trim, uppercase)
+--   ✗ NO hace joins
+--   ✗ NO agrega lógica de negocio
+--   ✗ NO crea métricas
+
+WITH source AS (
+    -- Referenciamos la tabla RAW que cargó load_raw.py
+    SELECT * FROM raw.properties
+),
+
+cleaned AS (
+    SELECT
+        -- ── Operación ─────────────────────────────────────────
+        TRIM(operation_type)                        AS operation_type,
+        TRIM(currency)                              AS currency,
+
+        -- ── Propiedad ─────────────────────────────────────────
+        TRIM(property_type)                         AS property_type,
+        TRY_CAST(rooms AS INTEGER)                  AS rooms,
+        -- TRY_CAST devuelve NULL en vez de error si el valor es inválido
+        -- Más robusto que CAST para datos sucios
+
+        -- ── Geografía ─────────────────────────────────────────
+        TRIM(l1)                                    AS pais,
+        TRIM(l2)                                    AS provincia,
+        TRIM(l3)                                    AS ciudad,
+
+        -- ── Fechas ────────────────────────────────────────────
+        TRY_CAST(start_date AS DATE)                AS fecha_alta,
+        TRY_CAST(end_date   AS DATE)                AS fecha_baja,
+
+        -- ── Métricas base ─────────────────────────────────────
+        TRY_CAST(price           AS DOUBLE)         AS precio,
+        TRY_CAST(surface_covered AS DOUBLE)         AS superficie_cubierta,
+        TRY_CAST(surface_total   AS DOUBLE)         AS superficie_total,
+
+        -- ── Metadatos de carga ────────────────────────────────
+        _loaded_at,
+        _source_file
+
+    FROM source
+),
+
+validated AS (
+    SELECT *
+    FROM cleaned
+    WHERE
+        -- Filtros de calidad — registros que no tienen sentido analítico
+        operation_type IN ('Venta', 'Alquiler', 'Alquiler temporal')
+        AND currency       IN ('ARS', 'USD')
+        AND precio         IS NOT NULL
+        AND precio         > 0
+        AND fecha_alta     IS NOT NULL
+        AND ciudad         IS NOT NULL
+        AND provincia      IS NOT NULL
+        -- Descartamos superficies imposibles (negativas o gigantes)
+        AND (superficie_total   IS NULL OR superficie_total   BETWEEN 5 AND 50000)
+        AND (superficie_cubierta IS NULL OR superficie_cubierta BETWEEN 5 AND 50000)
+)
+
+SELECT * FROM validated
+  );
+
+[0m12:02:45.806077 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m12:02:45.807124 [debug] [Thread-1 (]: Using duckdb connection "model.real_estate_analytics.stg_properties"
+[0m12:02:45.807124 [debug] [Thread-1 (]: On model.real_estate_analytics.stg_properties: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "model.real_estate_analytics.stg_properties"} */
+alter view "real_estate"."main_staging"."stg_properties" rename to "stg_properties__dbt_backup"
+[0m12:02:45.819227 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m12:02:45.821269 [debug] [Thread-1 (]: Using duckdb connection "model.real_estate_analytics.stg_properties"
+[0m12:02:45.821269 [debug] [Thread-1 (]: On model.real_estate_analytics.stg_properties: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "model.real_estate_analytics.stg_properties"} */
+alter view "real_estate"."main_staging"."stg_properties__dbt_tmp" rename to "stg_properties"
+[0m12:02:45.828183 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m12:02:45.847153 [debug] [Thread-1 (]: On model.real_estate_analytics.stg_properties: COMMIT
+[0m12:02:45.847153 [debug] [Thread-1 (]: Using duckdb connection "model.real_estate_analytics.stg_properties"
+[0m12:02:45.862942 [debug] [Thread-1 (]: On model.real_estate_analytics.stg_properties: COMMIT
+[0m12:02:45.867728 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m12:02:45.868781 [debug] [Thread-1 (]: Using duckdb connection "model.real_estate_analytics.stg_properties"
+[0m12:02:45.868781 [debug] [Thread-1 (]: On model.real_estate_analytics.stg_properties: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "model.real_estate_analytics.stg_properties"} */
+drop view if exists "real_estate"."main_staging"."stg_properties__dbt_backup" cascade
+[0m12:02:45.883061 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m12:02:45.889740 [debug] [Thread-1 (]: On model.real_estate_analytics.stg_properties: Close
+[0m12:02:45.921019 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2a8065bc-1f27-4940-892e-d3cdd3889471', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E1EA058F20>]}
+[0m12:02:45.922047 [info ] [Thread-1 (]: 1 of 4 OK created sql view model main_staging.stg_properties ................... [[32mOK[0m in 0.23s]
+[0m12:02:45.924052 [debug] [Thread-1 (]: Finished running node model.real_estate_analytics.stg_properties
+[0m12:02:45.924840 [debug] [Thread-1 (]: Began running node model.real_estate_analytics.fact_publicaciones
+[0m12:02:45.925869 [info ] [Thread-1 (]: 2 of 4 START sql table model main_marts.fact_publicaciones ..................... [RUN]
+[0m12:02:45.926874 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.real_estate_analytics.stg_properties, now model.real_estate_analytics.fact_publicaciones)
+[0m12:02:45.926874 [debug] [Thread-1 (]: Began compiling node model.real_estate_analytics.fact_publicaciones
+[0m12:02:45.930086 [debug] [Thread-1 (]: Writing injected SQL for node "model.real_estate_analytics.fact_publicaciones"
+[0m12:02:45.932085 [debug] [Thread-1 (]: Began executing node model.real_estate_analytics.fact_publicaciones
+[0m12:02:45.940902 [debug] [Thread-1 (]: Writing runtime sql for node "model.real_estate_analytics.fact_publicaciones"
+[0m12:02:45.950719 [debug] [Thread-1 (]: Using duckdb connection "model.real_estate_analytics.fact_publicaciones"
+[0m12:02:45.951764 [debug] [Thread-1 (]: On model.real_estate_analytics.fact_publicaciones: BEGIN
+[0m12:02:45.952763 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:02:45.960571 [debug] [Thread-1 (]: SQL status: OK in 0.008 seconds
+[0m12:02:45.960571 [debug] [Thread-1 (]: Using duckdb connection "model.real_estate_analytics.fact_publicaciones"
+[0m12:02:45.961605 [debug] [Thread-1 (]: On model.real_estate_analytics.fact_publicaciones: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "model.real_estate_analytics.fact_publicaciones"} */
+
+  
+    
+    
+
+    create  table
+      "real_estate"."main_marts"."fact_publicaciones__dbt_tmp"
+  
+    as (
+      -- models/marts/fact_publicaciones.sql
+-- =====================================
+-- Modelo MART: tabla de hechos lista para Tableau.
+--
+-- Este modelo construye la tabla central del star schema
+-- con todas las métricas calculadas y claves foráneas resueltas.
+-- Es el modelo que Tableau va a consumir directamente.
+
+WITH base AS (
+    -- Referenciamos el modelo de staging con ref()
+    -- ref() es la forma de dbt de conectar modelos entre sí
+    -- Ventaja: dbt construye automáticamente el orden de ejecución
+    SELECT * FROM "real_estate"."main_staging"."stg_properties"
+),
+
+with_metrics AS (
+    SELECT
+        -- ── Identificador único ───────────────────────────────
+        ROW_NUMBER() OVER (ORDER BY fecha_alta, operation_type) AS id_publicacion,
+
+        -- ── Dimensiones (para filtros en Tableau) ────────────
+        operation_type,
+        currency,
+        property_type,
+        rooms,
+        pais,
+        provincia,
+        ciudad,
+
+        -- ── Dimensión tiempo descompuesta ────────────────────
+        -- Tableau puede hacer esto, pero tenerlo precalculado
+        -- hace los dashboards más rápidos
+        fecha_alta,
+        fecha_baja,
+        YEAR(fecha_alta)                            AS anio,
+        QUARTER(fecha_alta)                         AS trimestre,
+        MONTH(fecha_alta)                           AS mes,
+        DAYOFWEEK(fecha_alta)                       AS dia_semana,
+        -- Nombre del mes en español para labels en Tableau
+        CASE MONTH(fecha_alta)
+            WHEN 1  THEN 'Enero'    WHEN 2  THEN 'Febrero'
+            WHEN 3  THEN 'Marzo'    WHEN 4  THEN 'Abril'
+            WHEN 5  THEN 'Mayo'     WHEN 6  THEN 'Junio'
+            WHEN 7  THEN 'Julio'    WHEN 8  THEN 'Agosto'
+            WHEN 9  THEN 'Septiembre' WHEN 10 THEN 'Octubre'
+            WHEN 11 THEN 'Noviembre'  WHEN 12 THEN 'Diciembre'
+        END                                         AS nombre_mes,
+
+        -- ── Métricas de precio ────────────────────────────────
+        precio,
+        CASE
+            WHEN superficie_total   > 0 THEN ROUND(precio / superficie_total,   2)
+            WHEN superficie_cubierta > 0 THEN ROUND(precio / superficie_cubierta, 2)
+        END                                         AS precio_por_m2,
+
+        -- ── Métricas de superficie ────────────────────────────
+        superficie_cubierta,
+        superficie_total,
+
+        -- ── Métricas de comisión ─────────────────────────────
+        -- La comisión varía por tipo de operación (lógica de negocio inmobiliario)
+        CASE operation_type
+            WHEN 'Venta'             THEN 0.03
+            WHEN 'Alquiler'          THEN 0.10
+            WHEN 'Alquiler temporal' THEN 0.15
+        END                                         AS porcentaje_comision,
+        ROUND(
+            precio * CASE operation_type
+                WHEN 'Venta'             THEN 0.03
+                WHEN 'Alquiler'          THEN 0.10
+                WHEN 'Alquiler temporal' THEN 0.15
+            END, 2
+        )                                           AS ingreso_comision,
+
+        -- ── Métrica de tiempo de cierre ───────────────────────
+        -- CORRECCIÓN vs modelo 2021: calculado aquí como medida,
+        -- no almacenado como par de FKs sin utilidad analítica
+        CASE
+            WHEN fecha_baja IS NOT NULL AND fecha_baja >= fecha_alta
+            THEN DATE_DIFF('day', fecha_alta, fecha_baja)
+        END                                         AS dias_publicacion,
+
+        -- ── Flag operación cerrada ────────────────────────────
+        CASE WHEN fecha_baja IS NOT NULL THEN 1 ELSE 0
+        END                                         AS es_operacion_cerrada,
+
+        -- ── Metadatos ─────────────────────────────────────────
+        _loaded_at
+
+    FROM base
+)
+
+SELECT * FROM with_metrics
+    );
+  
+  
+[0m12:02:47.542351 [debug] [Thread-1 (]: SQL status: OK in 1.583 seconds
+[0m12:02:47.549429 [debug] [Thread-1 (]: Using duckdb connection "model.real_estate_analytics.fact_publicaciones"
+[0m12:02:47.549429 [debug] [Thread-1 (]: On model.real_estate_analytics.fact_publicaciones: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "model.real_estate_analytics.fact_publicaciones"} */
+alter table "real_estate"."main_marts"."fact_publicaciones" rename to "fact_publicaciones__dbt_backup"
+[0m12:02:47.552857 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m12:02:47.555609 [debug] [Thread-1 (]: Using duckdb connection "model.real_estate_analytics.fact_publicaciones"
+[0m12:02:47.556605 [debug] [Thread-1 (]: On model.real_estate_analytics.fact_publicaciones: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "model.real_estate_analytics.fact_publicaciones"} */
+alter table "real_estate"."main_marts"."fact_publicaciones__dbt_tmp" rename to "fact_publicaciones"
+[0m12:02:47.558283 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m12:02:47.563747 [debug] [Thread-1 (]: On model.real_estate_analytics.fact_publicaciones: COMMIT
+[0m12:02:47.563747 [debug] [Thread-1 (]: Using duckdb connection "model.real_estate_analytics.fact_publicaciones"
+[0m12:02:47.565865 [debug] [Thread-1 (]: On model.real_estate_analytics.fact_publicaciones: COMMIT
+[0m12:02:48.009473 [debug] [Thread-1 (]: SQL status: OK in 0.443 seconds
+[0m12:02:48.010474 [debug] [Thread-1 (]: Using duckdb connection "model.real_estate_analytics.fact_publicaciones"
+[0m12:02:48.010474 [debug] [Thread-1 (]: On model.real_estate_analytics.fact_publicaciones: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "model.real_estate_analytics.fact_publicaciones"} */
+drop table if exists "real_estate"."main_marts"."fact_publicaciones__dbt_backup" cascade
+[0m12:02:48.017905 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m12:02:48.018905 [debug] [Thread-1 (]: On model.real_estate_analytics.fact_publicaciones: Close
+[0m12:02:48.436077 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2a8065bc-1f27-4940-892e-d3cdd3889471', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E1EE3DFA40>]}
+[0m12:02:48.436077 [info ] [Thread-1 (]: 2 of 4 OK created sql table model main_marts.fact_publicaciones ................ [[32mOK[0m in 2.51s]
+[0m12:02:48.446166 [debug] [Thread-1 (]: Finished running node model.real_estate_analytics.fact_publicaciones
+[0m12:02:48.447424 [debug] [Thread-1 (]: Began running node model.real_estate_analytics.mart_kpis_geo
+[0m12:02:48.449257 [info ] [Thread-1 (]: 3 of 4 START sql table model main_marts.mart_kpis_geo .......................... [RUN]
+[0m12:02:48.451545 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.real_estate_analytics.fact_publicaciones, now model.real_estate_analytics.mart_kpis_geo)
+[0m12:02:48.452603 [debug] [Thread-1 (]: Began compiling node model.real_estate_analytics.mart_kpis_geo
+[0m12:02:48.456702 [debug] [Thread-1 (]: Writing injected SQL for node "model.real_estate_analytics.mart_kpis_geo"
+[0m12:02:48.461472 [debug] [Thread-1 (]: Began executing node model.real_estate_analytics.mart_kpis_geo
+[0m12:02:48.468594 [debug] [Thread-1 (]: Writing runtime sql for node "model.real_estate_analytics.mart_kpis_geo"
+[0m12:02:48.470749 [debug] [Thread-1 (]: Using duckdb connection "model.real_estate_analytics.mart_kpis_geo"
+[0m12:02:48.472616 [debug] [Thread-1 (]: On model.real_estate_analytics.mart_kpis_geo: BEGIN
+[0m12:02:48.473658 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:02:48.490457 [debug] [Thread-1 (]: SQL status: OK in 0.018 seconds
+[0m12:02:48.490457 [debug] [Thread-1 (]: Using duckdb connection "model.real_estate_analytics.mart_kpis_geo"
+[0m12:02:48.490457 [debug] [Thread-1 (]: On model.real_estate_analytics.mart_kpis_geo: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "model.real_estate_analytics.mart_kpis_geo"} */
+
+  
+    
+    
+
+    create  table
+      "real_estate"."main_marts"."mart_kpis_geo__dbt_tmp"
+  
+    as (
+      -- models/marts/mart_kpis_geo.sql
+-- ================================
+-- KPIs geográficos agregados para el dashboard de Tableau.
+--
+-- Este modelo responde directamente los requerimientos
+-- de la gerencia de Ventas y Marketing del trabajo práctico:
+--   → Zonas geográficas con mayor ganancia por tipo de operación
+--   → Tiempo de cierre por zona
+--   → Precio por m² por provincia y ciudad
+
+SELECT
+    provincia,
+    ciudad,
+    operation_type,
+    currency,
+
+    -- Volumen
+    COUNT(*)                                    AS cant_publicaciones,
+    SUM(es_operacion_cerrada)                   AS cant_cerradas,
+    ROUND(
+        SUM(es_operacion_cerrada) * 100.0 / COUNT(*), 1
+    )                                           AS tasa_cierre_pct,
+
+    -- Precios
+    ROUND(AVG(precio), 2)                       AS precio_promedio,
+    ROUND(MEDIAN(precio), 2)                    AS precio_mediana,
+    ROUND(AVG(precio_por_m2), 2)                AS precio_m2_promedio,
+
+    -- Comisiones
+    ROUND(SUM(ingreso_comision), 2)             AS total_comision,
+    ROUND(AVG(ingreso_comision), 2)             AS comision_promedio,
+
+    -- Tiempo de cierre
+    ROUND(AVG(dias_publicacion), 1)             AS promedio_dias_cierre,
+    ROUND(MEDIAN(dias_publicacion), 1)          AS mediana_dias_cierre,
+
+    -- Superficie
+    ROUND(AVG(superficie_cubierta), 1)          AS sup_cubierta_promedio,
+    ROUND(AVG(superficie_total), 1)             AS sup_total_promedio
+
+FROM "real_estate"."main_marts"."fact_publicaciones"
+GROUP BY provincia, ciudad, operation_type, currency
+    );
+  
+  
+[0m12:02:48.594994 [debug] [Thread-1 (]: SQL status: OK in 0.104 seconds
+[0m12:02:48.594994 [debug] [Thread-1 (]: Using duckdb connection "model.real_estate_analytics.mart_kpis_geo"
+[0m12:02:48.594994 [debug] [Thread-1 (]: On model.real_estate_analytics.mart_kpis_geo: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "model.real_estate_analytics.mart_kpis_geo"} */
+alter table "real_estate"."main_marts"."mart_kpis_geo" rename to "mart_kpis_geo__dbt_backup"
+[0m12:02:48.607146 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m12:02:48.608146 [debug] [Thread-1 (]: Using duckdb connection "model.real_estate_analytics.mart_kpis_geo"
+[0m12:02:48.608146 [debug] [Thread-1 (]: On model.real_estate_analytics.mart_kpis_geo: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "model.real_estate_analytics.mart_kpis_geo"} */
+alter table "real_estate"."main_marts"."mart_kpis_geo__dbt_tmp" rename to "mart_kpis_geo"
+[0m12:02:48.608146 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m12:02:48.613214 [debug] [Thread-1 (]: On model.real_estate_analytics.mart_kpis_geo: COMMIT
+[0m12:02:48.613214 [debug] [Thread-1 (]: Using duckdb connection "model.real_estate_analytics.mart_kpis_geo"
+[0m12:02:48.614215 [debug] [Thread-1 (]: On model.real_estate_analytics.mart_kpis_geo: COMMIT
+[0m12:02:48.619857 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m12:02:48.622308 [debug] [Thread-1 (]: Using duckdb connection "model.real_estate_analytics.mart_kpis_geo"
+[0m12:02:48.622308 [debug] [Thread-1 (]: On model.real_estate_analytics.mart_kpis_geo: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "model.real_estate_analytics.mart_kpis_geo"} */
+drop table if exists "real_estate"."main_marts"."mart_kpis_geo__dbt_backup" cascade
+[0m12:02:48.624894 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m12:02:48.624894 [debug] [Thread-1 (]: On model.real_estate_analytics.mart_kpis_geo: Close
+[0m12:02:48.657038 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2a8065bc-1f27-4940-892e-d3cdd3889471', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E1EE48EA80>]}
+[0m12:02:48.657038 [info ] [Thread-1 (]: 3 of 4 OK created sql table model main_marts.mart_kpis_geo ..................... [[32mOK[0m in 0.21s]
+[0m12:02:48.665578 [debug] [Thread-1 (]: Finished running node model.real_estate_analytics.mart_kpis_geo
+[0m12:02:48.665578 [debug] [Thread-1 (]: Began running node model.real_estate_analytics.mart_kpis_tiempo
+[0m12:02:48.666546 [info ] [Thread-1 (]: 4 of 4 START sql table model main_marts.mart_kpis_tiempo ....................... [RUN]
+[0m12:02:48.667579 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.real_estate_analytics.mart_kpis_geo, now model.real_estate_analytics.mart_kpis_tiempo)
+[0m12:02:48.669098 [debug] [Thread-1 (]: Began compiling node model.real_estate_analytics.mart_kpis_tiempo
+[0m12:02:48.672513 [debug] [Thread-1 (]: Writing injected SQL for node "model.real_estate_analytics.mart_kpis_tiempo"
+[0m12:02:48.674327 [debug] [Thread-1 (]: Began executing node model.real_estate_analytics.mart_kpis_tiempo
+[0m12:02:48.675332 [debug] [Thread-1 (]: Writing runtime sql for node "model.real_estate_analytics.mart_kpis_tiempo"
+[0m12:02:48.679600 [debug] [Thread-1 (]: Using duckdb connection "model.real_estate_analytics.mart_kpis_tiempo"
+[0m12:02:48.679600 [debug] [Thread-1 (]: On model.real_estate_analytics.mart_kpis_tiempo: BEGIN
+[0m12:02:48.680664 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:02:48.689096 [debug] [Thread-1 (]: SQL status: OK in 0.009 seconds
+[0m12:02:48.690125 [debug] [Thread-1 (]: Using duckdb connection "model.real_estate_analytics.mart_kpis_tiempo"
+[0m12:02:48.691269 [debug] [Thread-1 (]: On model.real_estate_analytics.mart_kpis_tiempo: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "model.real_estate_analytics.mart_kpis_tiempo"} */
+
+  
+    
+    
+
+    create  table
+      "real_estate"."main_marts"."mart_kpis_tiempo__dbt_tmp"
+  
+    as (
+      -- models/marts/mart_kpis_tiempo.sql
+-- ====================================
+-- Serie temporal mensual para el dashboard de Tableau.
+-- Responde: evolución de publicaciones, comisiones e ingresos por mes.
+
+SELECT
+    anio,
+    mes,
+    nombre_mes,
+    -- Columna auxiliar para ordenar correctamente en Tableau
+    -- sin depender del nombre del mes (que es string)
+    MAKE_DATE(anio, mes, 1)                     AS periodo,
+    operation_type,
+    currency,
+
+    COUNT(*)                                    AS cant_publicaciones,
+    SUM(es_operacion_cerrada)                   AS cant_cerradas,
+    ROUND(SUM(ingreso_comision), 2)             AS total_comision,
+    ROUND(AVG(precio), 2)                       AS precio_promedio,
+    ROUND(AVG(dias_publicacion), 1)             AS promedio_dias_cierre
+
+FROM "real_estate"."main_marts"."fact_publicaciones"
+GROUP BY anio, mes, nombre_mes, operation_type, currency
+ORDER BY anio, mes
+    );
+  
+  
+[0m12:02:48.729591 [debug] [Thread-1 (]: SQL status: OK in 0.038 seconds
+[0m12:02:48.733586 [debug] [Thread-1 (]: Using duckdb connection "model.real_estate_analytics.mart_kpis_tiempo"
+[0m12:02:48.733586 [debug] [Thread-1 (]: On model.real_estate_analytics.mart_kpis_tiempo: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "model.real_estate_analytics.mart_kpis_tiempo"} */
+alter table "real_estate"."main_marts"."mart_kpis_tiempo" rename to "mart_kpis_tiempo__dbt_backup"
+[0m12:02:48.735079 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m12:02:48.738956 [debug] [Thread-1 (]: Using duckdb connection "model.real_estate_analytics.mart_kpis_tiempo"
+[0m12:02:48.739957 [debug] [Thread-1 (]: On model.real_estate_analytics.mart_kpis_tiempo: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "model.real_estate_analytics.mart_kpis_tiempo"} */
+alter table "real_estate"."main_marts"."mart_kpis_tiempo__dbt_tmp" rename to "mart_kpis_tiempo"
+[0m12:02:48.741213 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m12:02:48.742256 [debug] [Thread-1 (]: On model.real_estate_analytics.mart_kpis_tiempo: COMMIT
+[0m12:02:48.742256 [debug] [Thread-1 (]: Using duckdb connection "model.real_estate_analytics.mart_kpis_tiempo"
+[0m12:02:48.745259 [debug] [Thread-1 (]: On model.real_estate_analytics.mart_kpis_tiempo: COMMIT
+[0m12:02:48.749284 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m12:02:48.750324 [debug] [Thread-1 (]: Using duckdb connection "model.real_estate_analytics.mart_kpis_tiempo"
+[0m12:02:48.750324 [debug] [Thread-1 (]: On model.real_estate_analytics.mart_kpis_tiempo: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "model.real_estate_analytics.mart_kpis_tiempo"} */
+drop table if exists "real_estate"."main_marts"."mart_kpis_tiempo__dbt_backup" cascade
+[0m12:02:48.755050 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m12:02:48.757009 [debug] [Thread-1 (]: On model.real_estate_analytics.mart_kpis_tiempo: Close
+[0m12:02:48.790977 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '2a8065bc-1f27-4940-892e-d3cdd3889471', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E1EE311760>]}
+[0m12:02:48.813659 [info ] [Thread-1 (]: 4 of 4 OK created sql table model main_marts.mart_kpis_tiempo .................. [[32mOK[0m in 0.12s]
+[0m12:02:48.816924 [debug] [Thread-1 (]: Finished running node model.real_estate_analytics.mart_kpis_tiempo
+[0m12:02:48.821962 [debug] [MainThread]: Using duckdb connection "master"
+[0m12:02:48.823423 [debug] [MainThread]: On master: BEGIN
+[0m12:02:48.825865 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m12:02:48.850215 [debug] [MainThread]: SQL status: OK in 0.024 seconds
+[0m12:02:48.852373 [debug] [MainThread]: On master: COMMIT
+[0m12:02:48.853379 [debug] [MainThread]: Using duckdb connection "master"
+[0m12:02:48.854049 [debug] [MainThread]: On master: COMMIT
+[0m12:02:48.855337 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m12:02:48.856345 [debug] [MainThread]: On master: Close
+[0m12:02:48.859952 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:02:48.859952 [debug] [MainThread]: Connection 'create_real_estate_main_marts' was properly closed.
+[0m12:02:48.861577 [debug] [MainThread]: Connection 'list_real_estate_main_marts' was properly closed.
+[0m12:02:48.862618 [debug] [MainThread]: Connection 'model.real_estate_analytics.mart_kpis_tiempo' was properly closed.
+[0m12:02:48.863582 [info ] [MainThread]: 
+[0m12:02:48.866537 [info ] [MainThread]: Finished running 1 view model, 3 table models in 0 hours 0 minutes and 3.56 seconds (3.56s).
+[0m12:02:48.873481 [debug] [MainThread]: Command end result
+[0m12:02:49.034235 [info ] [MainThread]: 
+[0m12:02:49.035435 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m12:02:49.036670 [info ] [MainThread]: 
+[0m12:02:49.037670 [info ] [MainThread]: Done. PASS=4 WARN=0 ERROR=0 SKIP=0 TOTAL=4
+[0m12:02:49.039615 [debug] [MainThread]: Command `dbt run` succeeded at 12:02:49.039615 after 5.73 seconds
+[0m12:02:49.041611 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E1EC3FA6C0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E1EBB25880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001E1EA150200>]}
+[0m12:02:49.041611 [debug] [MainThread]: Flushing usage events
+[0m12:02:53.359379 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CDA55C39E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CDA55C3290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CDA55C2060>]}
+
+
+============================== 12:02:53.362078 | b570b4ef-4ae8-4283-8a02-d430d2774935 ==============================
+[0m12:02:53.362078 [info ] [MainThread]: Running with dbt=1.8.0
+[0m12:02:53.364389 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '.', 'version_check': 'True', 'warn_error': 'None', 'log_path': 'C:\\Users\\ivana\\real_estate_argentina_analytics\\dbt_realestate\\logs', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt test --profiles-dir .', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m12:02:53.672645 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b570b4ef-4ae8-4283-8a02-d430d2774935', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CDA39198B0>]}
+[0m12:02:53.758884 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b570b4ef-4ae8-4283-8a02-d430d2774935', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CDA5F60DA0>]}
+[0m12:02:53.758884 [info ] [MainThread]: Registered adapter: duckdb=1.8.0
+[0m12:02:54.078365 [debug] [MainThread]: checksum: dbb12d416fdb55e3665e4828703bbedf40c5c90ed7ca6ff39bbbfb29b12b0a92, vars: {}, profile: , target: , version: 1.8.0
+[0m12:02:54.252588 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m12:02:54.252588 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m12:02:54.308350 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b570b4ef-4ae8-4283-8a02-d430d2774935', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CDA71CD0A0>]}
+[0m12:02:54.464697 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b570b4ef-4ae8-4283-8a02-d430d2774935', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CDA75AAAB0>]}
+[0m12:02:54.465780 [info ] [MainThread]: Found 4 models, 11 data tests, 421 macros
+[0m12:02:54.466849 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b570b4ef-4ae8-4283-8a02-d430d2774935', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CDA74C5D00>]}
+[0m12:02:54.468861 [info ] [MainThread]: 
+[0m12:02:54.470481 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m12:02:54.479131 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_real_estate_main_staging'
+[0m12:02:54.573947 [debug] [ThreadPool]: Using duckdb connection "list_real_estate_main_staging"
+[0m12:02:54.573947 [debug] [ThreadPool]: On list_real_estate_main_staging: BEGIN
+[0m12:02:54.575234 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:02:54.584462 [debug] [ThreadPool]: SQL status: OK in 0.010 seconds
+[0m12:02:54.584462 [debug] [ThreadPool]: Using duckdb connection "list_real_estate_main_staging"
+[0m12:02:54.586352 [debug] [ThreadPool]: On list_real_estate_main_staging: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "connection_name": "list_real_estate_main_staging"} */
+select
+      'real_estate' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'main_staging'
+    and table_catalog = 'real_estate'
+  
+[0m12:02:54.605826 [debug] [ThreadPool]: SQL status: OK in 0.034 seconds
+[0m12:02:54.623626 [debug] [ThreadPool]: On list_real_estate_main_staging: ROLLBACK
+[0m12:02:54.623626 [debug] [ThreadPool]: Failed to rollback 'list_real_estate_main_staging'
+[0m12:02:54.623626 [debug] [ThreadPool]: On list_real_estate_main_staging: Close
+[0m12:02:54.629217 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_real_estate_main_staging, now list_real_estate_main_marts)
+[0m12:02:54.630257 [debug] [ThreadPool]: Using duckdb connection "list_real_estate_main_marts"
+[0m12:02:54.630257 [debug] [ThreadPool]: On list_real_estate_main_marts: BEGIN
+[0m12:02:54.630257 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m12:02:54.645890 [debug] [ThreadPool]: SQL status: OK in 0.013 seconds
+[0m12:02:54.646927 [debug] [ThreadPool]: Using duckdb connection "list_real_estate_main_marts"
+[0m12:02:54.647930 [debug] [ThreadPool]: On list_real_estate_main_marts: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "connection_name": "list_real_estate_main_marts"} */
+select
+      'real_estate' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where table_schema = 'main_marts'
+    and table_catalog = 'real_estate'
+  
+[0m12:02:54.666055 [debug] [ThreadPool]: SQL status: OK in 0.027 seconds
+[0m12:02:54.681717 [debug] [ThreadPool]: On list_real_estate_main_marts: ROLLBACK
+[0m12:02:54.682756 [debug] [ThreadPool]: Failed to rollback 'list_real_estate_main_marts'
+[0m12:02:54.682756 [debug] [ThreadPool]: On list_real_estate_main_marts: Close
+[0m12:02:54.688006 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b570b4ef-4ae8-4283-8a02-d430d2774935', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CDA5AF4530>]}
+[0m12:02:54.688006 [debug] [MainThread]: Using duckdb connection "master"
+[0m12:02:54.688992 [debug] [MainThread]: On master: BEGIN
+[0m12:02:54.690026 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m12:02:54.701718 [debug] [MainThread]: SQL status: OK in 0.011 seconds
+[0m12:02:54.702720 [debug] [MainThread]: On master: COMMIT
+[0m12:02:54.702720 [debug] [MainThread]: Using duckdb connection "master"
+[0m12:02:54.704175 [debug] [MainThread]: On master: COMMIT
+[0m12:02:54.705183 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m12:02:54.705183 [debug] [MainThread]: On master: Close
+[0m12:02:54.708790 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m12:02:54.709268 [info ] [MainThread]: 
+[0m12:02:54.716600 [debug] [Thread-1 (]: Began running node test.real_estate_analytics.accepted_values_stg_properties_currency__ARS__USD.207a856ea7
+[0m12:02:54.717600 [info ] [Thread-1 (]: 1 of 11 START test accepted_values_stg_properties_currency__ARS__USD ........... [RUN]
+[0m12:02:54.719719 [debug] [Thread-1 (]: Acquiring new duckdb connection 'test.real_estate_analytics.accepted_values_stg_properties_currency__ARS__USD.207a856ea7'
+[0m12:02:54.721123 [debug] [Thread-1 (]: Began compiling node test.real_estate_analytics.accepted_values_stg_properties_currency__ARS__USD.207a856ea7
+[0m12:02:54.740305 [debug] [Thread-1 (]: Writing injected SQL for node "test.real_estate_analytics.accepted_values_stg_properties_currency__ARS__USD.207a856ea7"
+[0m12:02:54.740305 [debug] [Thread-1 (]: Began executing node test.real_estate_analytics.accepted_values_stg_properties_currency__ARS__USD.207a856ea7
+[0m12:02:54.788251 [debug] [Thread-1 (]: Writing runtime sql for node "test.real_estate_analytics.accepted_values_stg_properties_currency__ARS__USD.207a856ea7"
+[0m12:02:54.790286 [debug] [Thread-1 (]: Using duckdb connection "test.real_estate_analytics.accepted_values_stg_properties_currency__ARS__USD.207a856ea7"
+[0m12:02:54.790286 [debug] [Thread-1 (]: On test.real_estate_analytics.accepted_values_stg_properties_currency__ARS__USD.207a856ea7: BEGIN
+[0m12:02:54.792196 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m12:02:54.800770 [debug] [Thread-1 (]: SQL status: OK in 0.009 seconds
+[0m12:02:54.801773 [debug] [Thread-1 (]: Using duckdb connection "test.real_estate_analytics.accepted_values_stg_properties_currency__ARS__USD.207a856ea7"
+[0m12:02:54.802776 [debug] [Thread-1 (]: On test.real_estate_analytics.accepted_values_stg_properties_currency__ARS__USD.207a856ea7: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "test.real_estate_analytics.accepted_values_stg_properties_currency__ARS__USD.207a856ea7"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        currency as value_field,
+        count(*) as n_records
+
+    from "real_estate"."main_staging"."stg_properties"
+    group by currency
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'ARS','USD'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m12:02:54.952302 [debug] [Thread-1 (]: SQL status: OK in 0.149 seconds
+[0m12:02:54.960401 [debug] [Thread-1 (]: On test.real_estate_analytics.accepted_values_stg_properties_currency__ARS__USD.207a856ea7: ROLLBACK
+[0m12:02:54.960401 [debug] [Thread-1 (]: Failed to rollback 'test.real_estate_analytics.accepted_values_stg_properties_currency__ARS__USD.207a856ea7'
+[0m12:02:54.960401 [debug] [Thread-1 (]: On test.real_estate_analytics.accepted_values_stg_properties_currency__ARS__USD.207a856ea7: Close
+[0m12:02:54.965298 [info ] [Thread-1 (]: 1 of 11 PASS accepted_values_stg_properties_currency__ARS__USD ................. [[32mPASS[0m in 0.25s]
+[0m12:02:54.968421 [debug] [Thread-1 (]: Finished running node test.real_estate_analytics.accepted_values_stg_properties_currency__ARS__USD.207a856ea7
+[0m12:02:54.970495 [debug] [Thread-1 (]: Began running node test.real_estate_analytics.accepted_values_stg_properties_operation_type__Venta__Alquiler__Alquiler_temporal.68783d3e71
+[0m12:02:54.971497 [info ] [Thread-1 (]: 2 of 11 START test accepted_values_stg_properties_operation_type__Venta__Alquiler__Alquiler_temporal  [RUN]
+[0m12:02:54.972738 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.real_estate_analytics.accepted_values_stg_properties_currency__ARS__USD.207a856ea7, now test.real_estate_analytics.accepted_values_stg_properties_operation_type__Venta__Alquiler__Alquiler_temporal.68783d3e71)
+[0m12:02:54.973742 [debug] [Thread-1 (]: Began compiling node test.real_estate_analytics.accepted_values_stg_properties_operation_type__Venta__Alquiler__Alquiler_temporal.68783d3e71
+[0m12:02:54.979351 [debug] [Thread-1 (]: Writing injected SQL for node "test.real_estate_analytics.accepted_values_stg_properties_operation_type__Venta__Alquiler__Alquiler_temporal.68783d3e71"
+[0m12:02:54.979351 [debug] [Thread-1 (]: Began executing node test.real_estate_analytics.accepted_values_stg_properties_operation_type__Venta__Alquiler__Alquiler_temporal.68783d3e71
+[0m12:02:54.979351 [debug] [Thread-1 (]: Writing runtime sql for node "test.real_estate_analytics.accepted_values_stg_properties_operation_type__Venta__Alquiler__Alquiler_temporal.68783d3e71"
+[0m12:02:54.979351 [debug] [Thread-1 (]: Using duckdb connection "test.real_estate_analytics.accepted_values_stg_properties_operation_type__Venta__Alquiler__Alquiler_temporal.68783d3e71"
+[0m12:02:54.985966 [debug] [Thread-1 (]: On test.real_estate_analytics.accepted_values_stg_properties_operation_type__Venta__Alquiler__Alquiler_temporal.68783d3e71: BEGIN
+[0m12:02:54.986582 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:02:54.995076 [debug] [Thread-1 (]: SQL status: OK in 0.009 seconds
+[0m12:02:54.997096 [debug] [Thread-1 (]: Using duckdb connection "test.real_estate_analytics.accepted_values_stg_properties_operation_type__Venta__Alquiler__Alquiler_temporal.68783d3e71"
+[0m12:02:54.997615 [debug] [Thread-1 (]: On test.real_estate_analytics.accepted_values_stg_properties_operation_type__Venta__Alquiler__Alquiler_temporal.68783d3e71: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "test.real_estate_analytics.accepted_values_stg_properties_operation_type__Venta__Alquiler__Alquiler_temporal.68783d3e71"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        operation_type as value_field,
+        count(*) as n_records
+
+    from "real_estate"."main_staging"."stg_properties"
+    group by operation_type
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'Venta','Alquiler','Alquiler temporal'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m12:02:55.155797 [debug] [Thread-1 (]: SQL status: OK in 0.167 seconds
+[0m12:02:55.155797 [debug] [Thread-1 (]: On test.real_estate_analytics.accepted_values_stg_properties_operation_type__Venta__Alquiler__Alquiler_temporal.68783d3e71: ROLLBACK
+[0m12:02:55.155797 [debug] [Thread-1 (]: Failed to rollback 'test.real_estate_analytics.accepted_values_stg_properties_operation_type__Venta__Alquiler__Alquiler_temporal.68783d3e71'
+[0m12:02:55.171558 [debug] [Thread-1 (]: On test.real_estate_analytics.accepted_values_stg_properties_operation_type__Venta__Alquiler__Alquiler_temporal.68783d3e71: Close
+[0m12:02:55.174552 [info ] [Thread-1 (]: 2 of 11 PASS accepted_values_stg_properties_operation_type__Venta__Alquiler__Alquiler_temporal  [[32mPASS[0m in 0.20s]
+[0m12:02:55.177251 [debug] [Thread-1 (]: Finished running node test.real_estate_analytics.accepted_values_stg_properties_operation_type__Venta__Alquiler__Alquiler_temporal.68783d3e71
+[0m12:02:55.178796 [debug] [Thread-1 (]: Began running node test.real_estate_analytics.not_null_fact_publicaciones_id_publicacion.5a5d0594dd
+[0m12:02:55.178796 [info ] [Thread-1 (]: 3 of 11 START test not_null_fact_publicaciones_id_publicacion .................. [RUN]
+[0m12:02:55.179796 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.real_estate_analytics.accepted_values_stg_properties_operation_type__Venta__Alquiler__Alquiler_temporal.68783d3e71, now test.real_estate_analytics.not_null_fact_publicaciones_id_publicacion.5a5d0594dd)
+[0m12:02:55.180798 [debug] [Thread-1 (]: Began compiling node test.real_estate_analytics.not_null_fact_publicaciones_id_publicacion.5a5d0594dd
+[0m12:02:55.188515 [debug] [Thread-1 (]: Writing injected SQL for node "test.real_estate_analytics.not_null_fact_publicaciones_id_publicacion.5a5d0594dd"
+[0m12:02:55.190610 [debug] [Thread-1 (]: Began executing node test.real_estate_analytics.not_null_fact_publicaciones_id_publicacion.5a5d0594dd
+[0m12:02:55.190610 [debug] [Thread-1 (]: Writing runtime sql for node "test.real_estate_analytics.not_null_fact_publicaciones_id_publicacion.5a5d0594dd"
+[0m12:02:55.190610 [debug] [Thread-1 (]: Using duckdb connection "test.real_estate_analytics.not_null_fact_publicaciones_id_publicacion.5a5d0594dd"
+[0m12:02:55.196630 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_fact_publicaciones_id_publicacion.5a5d0594dd: BEGIN
+[0m12:02:55.197253 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:02:55.204772 [debug] [Thread-1 (]: SQL status: OK in 0.008 seconds
+[0m12:02:55.205773 [debug] [Thread-1 (]: Using duckdb connection "test.real_estate_analytics.not_null_fact_publicaciones_id_publicacion.5a5d0594dd"
+[0m12:02:55.205773 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_fact_publicaciones_id_publicacion.5a5d0594dd: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "test.real_estate_analytics.not_null_fact_publicaciones_id_publicacion.5a5d0594dd"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select id_publicacion
+from "real_estate"."main_marts"."fact_publicaciones"
+where id_publicacion is null
+
+
+
+      
+    ) dbt_internal_test
+[0m12:02:55.207895 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m12:02:55.209899 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_fact_publicaciones_id_publicacion.5a5d0594dd: ROLLBACK
+[0m12:02:55.209899 [debug] [Thread-1 (]: Failed to rollback 'test.real_estate_analytics.not_null_fact_publicaciones_id_publicacion.5a5d0594dd'
+[0m12:02:55.209899 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_fact_publicaciones_id_publicacion.5a5d0594dd: Close
+[0m12:02:55.215284 [info ] [Thread-1 (]: 3 of 11 PASS not_null_fact_publicaciones_id_publicacion ........................ [[32mPASS[0m in 0.04s]
+[0m12:02:55.215925 [debug] [Thread-1 (]: Finished running node test.real_estate_analytics.not_null_fact_publicaciones_id_publicacion.5a5d0594dd
+[0m12:02:55.217251 [debug] [Thread-1 (]: Began running node test.real_estate_analytics.not_null_fact_publicaciones_precio.d15953a1b5
+[0m12:02:55.218264 [info ] [Thread-1 (]: 4 of 11 START test not_null_fact_publicaciones_precio .......................... [RUN]
+[0m12:02:55.218623 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.real_estate_analytics.not_null_fact_publicaciones_id_publicacion.5a5d0594dd, now test.real_estate_analytics.not_null_fact_publicaciones_precio.d15953a1b5)
+[0m12:02:55.219628 [debug] [Thread-1 (]: Began compiling node test.real_estate_analytics.not_null_fact_publicaciones_precio.d15953a1b5
+[0m12:02:55.223482 [debug] [Thread-1 (]: Writing injected SQL for node "test.real_estate_analytics.not_null_fact_publicaciones_precio.d15953a1b5"
+[0m12:02:55.223482 [debug] [Thread-1 (]: Began executing node test.real_estate_analytics.not_null_fact_publicaciones_precio.d15953a1b5
+[0m12:02:55.229001 [debug] [Thread-1 (]: Writing runtime sql for node "test.real_estate_analytics.not_null_fact_publicaciones_precio.d15953a1b5"
+[0m12:02:55.229001 [debug] [Thread-1 (]: Using duckdb connection "test.real_estate_analytics.not_null_fact_publicaciones_precio.d15953a1b5"
+[0m12:02:55.229001 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_fact_publicaciones_precio.d15953a1b5: BEGIN
+[0m12:02:55.233394 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:02:55.243482 [debug] [Thread-1 (]: SQL status: OK in 0.010 seconds
+[0m12:02:55.244485 [debug] [Thread-1 (]: Using duckdb connection "test.real_estate_analytics.not_null_fact_publicaciones_precio.d15953a1b5"
+[0m12:02:55.244485 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_fact_publicaciones_precio.d15953a1b5: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "test.real_estate_analytics.not_null_fact_publicaciones_precio.d15953a1b5"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select precio
+from "real_estate"."main_marts"."fact_publicaciones"
+where precio is null
+
+
+
+      
+    ) dbt_internal_test
+[0m12:02:55.245794 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m12:02:55.247797 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_fact_publicaciones_precio.d15953a1b5: ROLLBACK
+[0m12:02:55.247797 [debug] [Thread-1 (]: Failed to rollback 'test.real_estate_analytics.not_null_fact_publicaciones_precio.d15953a1b5'
+[0m12:02:55.247797 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_fact_publicaciones_precio.d15953a1b5: Close
+[0m12:02:55.253085 [info ] [Thread-1 (]: 4 of 11 PASS not_null_fact_publicaciones_precio ................................ [[32mPASS[0m in 0.03s]
+[0m12:02:55.253929 [debug] [Thread-1 (]: Finished running node test.real_estate_analytics.not_null_fact_publicaciones_precio.d15953a1b5
+[0m12:02:55.254928 [debug] [Thread-1 (]: Began running node test.real_estate_analytics.not_null_stg_properties_ciudad.5d3d3e1a02
+[0m12:02:55.256397 [info ] [Thread-1 (]: 5 of 11 START test not_null_stg_properties_ciudad .............................. [RUN]
+[0m12:02:55.265404 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.real_estate_analytics.not_null_fact_publicaciones_precio.d15953a1b5, now test.real_estate_analytics.not_null_stg_properties_ciudad.5d3d3e1a02)
+[0m12:02:55.266403 [debug] [Thread-1 (]: Began compiling node test.real_estate_analytics.not_null_stg_properties_ciudad.5d3d3e1a02
+[0m12:02:55.272513 [debug] [Thread-1 (]: Writing injected SQL for node "test.real_estate_analytics.not_null_stg_properties_ciudad.5d3d3e1a02"
+[0m12:02:55.273520 [debug] [Thread-1 (]: Began executing node test.real_estate_analytics.not_null_stg_properties_ciudad.5d3d3e1a02
+[0m12:02:55.276392 [debug] [Thread-1 (]: Writing runtime sql for node "test.real_estate_analytics.not_null_stg_properties_ciudad.5d3d3e1a02"
+[0m12:02:55.276392 [debug] [Thread-1 (]: Using duckdb connection "test.real_estate_analytics.not_null_stg_properties_ciudad.5d3d3e1a02"
+[0m12:02:55.276392 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_ciudad.5d3d3e1a02: BEGIN
+[0m12:02:55.280813 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:02:55.290261 [debug] [Thread-1 (]: SQL status: OK in 0.011 seconds
+[0m12:02:55.292569 [debug] [Thread-1 (]: Using duckdb connection "test.real_estate_analytics.not_null_stg_properties_ciudad.5d3d3e1a02"
+[0m12:02:55.293567 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_ciudad.5d3d3e1a02: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "test.real_estate_analytics.not_null_stg_properties_ciudad.5d3d3e1a02"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select ciudad
+from "real_estate"."main_staging"."stg_properties"
+where ciudad is null
+
+
+
+      
+    ) dbt_internal_test
+[0m12:02:55.390372 [debug] [Thread-1 (]: SQL status: OK in 0.102 seconds
+[0m12:02:55.398214 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_ciudad.5d3d3e1a02: ROLLBACK
+[0m12:02:55.398214 [debug] [Thread-1 (]: Failed to rollback 'test.real_estate_analytics.not_null_stg_properties_ciudad.5d3d3e1a02'
+[0m12:02:55.398214 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_ciudad.5d3d3e1a02: Close
+[0m12:02:55.405805 [info ] [Thread-1 (]: 5 of 11 PASS not_null_stg_properties_ciudad .................................... [[32mPASS[0m in 0.14s]
+[0m12:02:55.407325 [debug] [Thread-1 (]: Finished running node test.real_estate_analytics.not_null_stg_properties_ciudad.5d3d3e1a02
+[0m12:02:55.408404 [debug] [Thread-1 (]: Began running node test.real_estate_analytics.not_null_stg_properties_currency.654e6c38ac
+[0m12:02:55.408404 [info ] [Thread-1 (]: 6 of 11 START test not_null_stg_properties_currency ............................ [RUN]
+[0m12:02:55.410445 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.real_estate_analytics.not_null_stg_properties_ciudad.5d3d3e1a02, now test.real_estate_analytics.not_null_stg_properties_currency.654e6c38ac)
+[0m12:02:55.410445 [debug] [Thread-1 (]: Began compiling node test.real_estate_analytics.not_null_stg_properties_currency.654e6c38ac
+[0m12:02:55.412595 [debug] [Thread-1 (]: Writing injected SQL for node "test.real_estate_analytics.not_null_stg_properties_currency.654e6c38ac"
+[0m12:02:55.412595 [debug] [Thread-1 (]: Began executing node test.real_estate_analytics.not_null_stg_properties_currency.654e6c38ac
+[0m12:02:55.417865 [debug] [Thread-1 (]: Writing runtime sql for node "test.real_estate_analytics.not_null_stg_properties_currency.654e6c38ac"
+[0m12:02:55.417865 [debug] [Thread-1 (]: Using duckdb connection "test.real_estate_analytics.not_null_stg_properties_currency.654e6c38ac"
+[0m12:02:55.421581 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_currency.654e6c38ac: BEGIN
+[0m12:02:55.421581 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:02:55.431047 [debug] [Thread-1 (]: SQL status: OK in 0.009 seconds
+[0m12:02:55.432045 [debug] [Thread-1 (]: Using duckdb connection "test.real_estate_analytics.not_null_stg_properties_currency.654e6c38ac"
+[0m12:02:55.432079 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_currency.654e6c38ac: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "test.real_estate_analytics.not_null_stg_properties_currency.654e6c38ac"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select currency
+from "real_estate"."main_staging"."stg_properties"
+where currency is null
+
+
+
+      
+    ) dbt_internal_test
+[0m12:02:55.532264 [debug] [Thread-1 (]: SQL status: OK in 0.110 seconds
+[0m12:02:55.545668 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_currency.654e6c38ac: ROLLBACK
+[0m12:02:55.545668 [debug] [Thread-1 (]: Failed to rollback 'test.real_estate_analytics.not_null_stg_properties_currency.654e6c38ac'
+[0m12:02:55.545668 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_currency.654e6c38ac: Close
+[0m12:02:55.551808 [info ] [Thread-1 (]: 6 of 11 PASS not_null_stg_properties_currency .................................. [[32mPASS[0m in 0.14s]
+[0m12:02:55.557976 [debug] [Thread-1 (]: Finished running node test.real_estate_analytics.not_null_stg_properties_currency.654e6c38ac
+[0m12:02:55.559711 [debug] [Thread-1 (]: Began running node test.real_estate_analytics.not_null_stg_properties_fecha_alta.b6e7c720a1
+[0m12:02:55.560714 [info ] [Thread-1 (]: 7 of 11 START test not_null_stg_properties_fecha_alta .......................... [RUN]
+[0m12:02:55.561712 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.real_estate_analytics.not_null_stg_properties_currency.654e6c38ac, now test.real_estate_analytics.not_null_stg_properties_fecha_alta.b6e7c720a1)
+[0m12:02:55.562712 [debug] [Thread-1 (]: Began compiling node test.real_estate_analytics.not_null_stg_properties_fecha_alta.b6e7c720a1
+[0m12:02:55.568879 [debug] [Thread-1 (]: Writing injected SQL for node "test.real_estate_analytics.not_null_stg_properties_fecha_alta.b6e7c720a1"
+[0m12:02:55.571916 [debug] [Thread-1 (]: Began executing node test.real_estate_analytics.not_null_stg_properties_fecha_alta.b6e7c720a1
+[0m12:02:55.572938 [debug] [Thread-1 (]: Writing runtime sql for node "test.real_estate_analytics.not_null_stg_properties_fecha_alta.b6e7c720a1"
+[0m12:02:55.572938 [debug] [Thread-1 (]: Using duckdb connection "test.real_estate_analytics.not_null_stg_properties_fecha_alta.b6e7c720a1"
+[0m12:02:55.572938 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_fecha_alta.b6e7c720a1: BEGIN
+[0m12:02:55.572938 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:02:55.600836 [debug] [Thread-1 (]: SQL status: OK in 0.019 seconds
+[0m12:02:55.601838 [debug] [Thread-1 (]: Using duckdb connection "test.real_estate_analytics.not_null_stg_properties_fecha_alta.b6e7c720a1"
+[0m12:02:55.601838 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_fecha_alta.b6e7c720a1: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "test.real_estate_analytics.not_null_stg_properties_fecha_alta.b6e7c720a1"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select fecha_alta
+from "real_estate"."main_staging"."stg_properties"
+where fecha_alta is null
+
+
+
+      
+    ) dbt_internal_test
+[0m12:02:55.672417 [debug] [Thread-1 (]: SQL status: OK in 0.070 seconds
+[0m12:02:55.677429 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_fecha_alta.b6e7c720a1: ROLLBACK
+[0m12:02:55.678428 [debug] [Thread-1 (]: Failed to rollback 'test.real_estate_analytics.not_null_stg_properties_fecha_alta.b6e7c720a1'
+[0m12:02:55.678428 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_fecha_alta.b6e7c720a1: Close
+[0m12:02:55.682775 [info ] [Thread-1 (]: 7 of 11 PASS not_null_stg_properties_fecha_alta ................................ [[32mPASS[0m in 0.12s]
+[0m12:02:55.687169 [debug] [Thread-1 (]: Finished running node test.real_estate_analytics.not_null_stg_properties_fecha_alta.b6e7c720a1
+[0m12:02:55.688156 [debug] [Thread-1 (]: Began running node test.real_estate_analytics.not_null_stg_properties_operation_type.612cd751ff
+[0m12:02:55.689201 [info ] [Thread-1 (]: 8 of 11 START test not_null_stg_properties_operation_type ...................... [RUN]
+[0m12:02:55.695667 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.real_estate_analytics.not_null_stg_properties_fecha_alta.b6e7c720a1, now test.real_estate_analytics.not_null_stg_properties_operation_type.612cd751ff)
+[0m12:02:55.696662 [debug] [Thread-1 (]: Began compiling node test.real_estate_analytics.not_null_stg_properties_operation_type.612cd751ff
+[0m12:02:55.696662 [debug] [Thread-1 (]: Writing injected SQL for node "test.real_estate_analytics.not_null_stg_properties_operation_type.612cd751ff"
+[0m12:02:55.696662 [debug] [Thread-1 (]: Began executing node test.real_estate_analytics.not_null_stg_properties_operation_type.612cd751ff
+[0m12:02:55.703700 [debug] [Thread-1 (]: Writing runtime sql for node "test.real_estate_analytics.not_null_stg_properties_operation_type.612cd751ff"
+[0m12:02:55.706163 [debug] [Thread-1 (]: Using duckdb connection "test.real_estate_analytics.not_null_stg_properties_operation_type.612cd751ff"
+[0m12:02:55.707150 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_operation_type.612cd751ff: BEGIN
+[0m12:02:55.708092 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:02:55.717408 [debug] [Thread-1 (]: SQL status: OK in 0.009 seconds
+[0m12:02:55.718406 [debug] [Thread-1 (]: Using duckdb connection "test.real_estate_analytics.not_null_stg_properties_operation_type.612cd751ff"
+[0m12:02:55.718406 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_operation_type.612cd751ff: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "test.real_estate_analytics.not_null_stg_properties_operation_type.612cd751ff"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select operation_type
+from "real_estate"."main_staging"."stg_properties"
+where operation_type is null
+
+
+
+      
+    ) dbt_internal_test
+[0m12:02:55.824920 [debug] [Thread-1 (]: SQL status: OK in 0.105 seconds
+[0m12:02:55.828399 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_operation_type.612cd751ff: ROLLBACK
+[0m12:02:55.828399 [debug] [Thread-1 (]: Failed to rollback 'test.real_estate_analytics.not_null_stg_properties_operation_type.612cd751ff'
+[0m12:02:55.828399 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_operation_type.612cd751ff: Close
+[0m12:02:55.833367 [info ] [Thread-1 (]: 8 of 11 PASS not_null_stg_properties_operation_type ............................ [[32mPASS[0m in 0.14s]
+[0m12:02:55.836817 [debug] [Thread-1 (]: Finished running node test.real_estate_analytics.not_null_stg_properties_operation_type.612cd751ff
+[0m12:02:55.839417 [debug] [Thread-1 (]: Began running node test.real_estate_analytics.not_null_stg_properties_precio.7e8b70e03b
+[0m12:02:55.840416 [info ] [Thread-1 (]: 9 of 11 START test not_null_stg_properties_precio .............................. [RUN]
+[0m12:02:55.846409 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.real_estate_analytics.not_null_stg_properties_operation_type.612cd751ff, now test.real_estate_analytics.not_null_stg_properties_precio.7e8b70e03b)
+[0m12:02:55.848403 [debug] [Thread-1 (]: Began compiling node test.real_estate_analytics.not_null_stg_properties_precio.7e8b70e03b
+[0m12:02:55.856253 [debug] [Thread-1 (]: Writing injected SQL for node "test.real_estate_analytics.not_null_stg_properties_precio.7e8b70e03b"
+[0m12:02:55.857253 [debug] [Thread-1 (]: Began executing node test.real_estate_analytics.not_null_stg_properties_precio.7e8b70e03b
+[0m12:02:55.857253 [debug] [Thread-1 (]: Writing runtime sql for node "test.real_estate_analytics.not_null_stg_properties_precio.7e8b70e03b"
+[0m12:02:55.857253 [debug] [Thread-1 (]: Using duckdb connection "test.real_estate_analytics.not_null_stg_properties_precio.7e8b70e03b"
+[0m12:02:55.857253 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_precio.7e8b70e03b: BEGIN
+[0m12:02:55.868918 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:02:55.882313 [debug] [Thread-1 (]: SQL status: OK in 0.013 seconds
+[0m12:02:55.883314 [debug] [Thread-1 (]: Using duckdb connection "test.real_estate_analytics.not_null_stg_properties_precio.7e8b70e03b"
+[0m12:02:55.884317 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_precio.7e8b70e03b: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "test.real_estate_analytics.not_null_stg_properties_precio.7e8b70e03b"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select precio
+from "real_estate"."main_staging"."stg_properties"
+where precio is null
+
+
+
+      
+    ) dbt_internal_test
+[0m12:02:55.942106 [debug] [Thread-1 (]: SQL status: OK in 0.062 seconds
+[0m12:02:55.949162 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_precio.7e8b70e03b: ROLLBACK
+[0m12:02:55.949162 [debug] [Thread-1 (]: Failed to rollback 'test.real_estate_analytics.not_null_stg_properties_precio.7e8b70e03b'
+[0m12:02:55.949162 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_precio.7e8b70e03b: Close
+[0m12:02:55.954896 [info ] [Thread-1 (]: 9 of 11 PASS not_null_stg_properties_precio .................................... [[32mPASS[0m in 0.11s]
+[0m12:02:55.960414 [debug] [Thread-1 (]: Finished running node test.real_estate_analytics.not_null_stg_properties_precio.7e8b70e03b
+[0m12:02:55.960414 [debug] [Thread-1 (]: Began running node test.real_estate_analytics.not_null_stg_properties_provincia.f172b975e2
+[0m12:02:55.962720 [info ] [Thread-1 (]: 10 of 11 START test not_null_stg_properties_provincia .......................... [RUN]
+[0m12:02:55.963802 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.real_estate_analytics.not_null_stg_properties_precio.7e8b70e03b, now test.real_estate_analytics.not_null_stg_properties_provincia.f172b975e2)
+[0m12:02:55.964810 [debug] [Thread-1 (]: Began compiling node test.real_estate_analytics.not_null_stg_properties_provincia.f172b975e2
+[0m12:02:55.971625 [debug] [Thread-1 (]: Writing injected SQL for node "test.real_estate_analytics.not_null_stg_properties_provincia.f172b975e2"
+[0m12:02:55.973654 [debug] [Thread-1 (]: Began executing node test.real_estate_analytics.not_null_stg_properties_provincia.f172b975e2
+[0m12:02:55.976707 [debug] [Thread-1 (]: Writing runtime sql for node "test.real_estate_analytics.not_null_stg_properties_provincia.f172b975e2"
+[0m12:02:55.976707 [debug] [Thread-1 (]: Using duckdb connection "test.real_estate_analytics.not_null_stg_properties_provincia.f172b975e2"
+[0m12:02:55.976707 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_provincia.f172b975e2: BEGIN
+[0m12:02:55.980716 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:02:55.988366 [debug] [Thread-1 (]: SQL status: OK in 0.008 seconds
+[0m12:02:55.988366 [debug] [Thread-1 (]: Using duckdb connection "test.real_estate_analytics.not_null_stg_properties_provincia.f172b975e2"
+[0m12:02:55.991289 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_provincia.f172b975e2: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "test.real_estate_analytics.not_null_stg_properties_provincia.f172b975e2"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select provincia
+from "real_estate"."main_staging"."stg_properties"
+where provincia is null
+
+
+
+      
+    ) dbt_internal_test
+[0m12:02:56.115258 [debug] [Thread-1 (]: SQL status: OK in 0.123 seconds
+[0m12:02:56.117639 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_provincia.f172b975e2: ROLLBACK
+[0m12:02:56.117639 [debug] [Thread-1 (]: Failed to rollback 'test.real_estate_analytics.not_null_stg_properties_provincia.f172b975e2'
+[0m12:02:56.117639 [debug] [Thread-1 (]: On test.real_estate_analytics.not_null_stg_properties_provincia.f172b975e2: Close
+[0m12:02:56.122802 [info ] [Thread-1 (]: 10 of 11 PASS not_null_stg_properties_provincia ................................ [[32mPASS[0m in 0.16s]
+[0m12:02:56.127379 [debug] [Thread-1 (]: Finished running node test.real_estate_analytics.not_null_stg_properties_provincia.f172b975e2
+[0m12:02:56.128651 [debug] [Thread-1 (]: Began running node test.real_estate_analytics.unique_fact_publicaciones_id_publicacion.fc66e23103
+[0m12:02:56.128651 [info ] [Thread-1 (]: 11 of 11 START test unique_fact_publicaciones_id_publicacion ................... [RUN]
+[0m12:02:56.130653 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.real_estate_analytics.not_null_stg_properties_provincia.f172b975e2, now test.real_estate_analytics.unique_fact_publicaciones_id_publicacion.fc66e23103)
+[0m12:02:56.130653 [debug] [Thread-1 (]: Began compiling node test.real_estate_analytics.unique_fact_publicaciones_id_publicacion.fc66e23103
+[0m12:02:56.140036 [debug] [Thread-1 (]: Writing injected SQL for node "test.real_estate_analytics.unique_fact_publicaciones_id_publicacion.fc66e23103"
+[0m12:02:56.140036 [debug] [Thread-1 (]: Began executing node test.real_estate_analytics.unique_fact_publicaciones_id_publicacion.fc66e23103
+[0m12:02:56.140036 [debug] [Thread-1 (]: Writing runtime sql for node "test.real_estate_analytics.unique_fact_publicaciones_id_publicacion.fc66e23103"
+[0m12:02:56.140036 [debug] [Thread-1 (]: Using duckdb connection "test.real_estate_analytics.unique_fact_publicaciones_id_publicacion.fc66e23103"
+[0m12:02:56.140036 [debug] [Thread-1 (]: On test.real_estate_analytics.unique_fact_publicaciones_id_publicacion.fc66e23103: BEGIN
+[0m12:02:56.146565 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m12:02:56.156494 [debug] [Thread-1 (]: SQL status: OK in 0.010 seconds
+[0m12:02:56.157499 [debug] [Thread-1 (]: Using duckdb connection "test.real_estate_analytics.unique_fact_publicaciones_id_publicacion.fc66e23103"
+[0m12:02:56.157499 [debug] [Thread-1 (]: On test.real_estate_analytics.unique_fact_publicaciones_id_publicacion.fc66e23103: /* {"app": "dbt", "dbt_version": "1.8.0", "profile_name": "real_estate_analytics", "target_name": "dev", "node_id": "test.real_estate_analytics.unique_fact_publicaciones_id_publicacion.fc66e23103"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    id_publicacion as unique_field,
+    count(*) as n_records
+
+from "real_estate"."main_marts"."fact_publicaciones"
+where id_publicacion is not null
+group by id_publicacion
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m12:02:56.231525 [debug] [Thread-1 (]: SQL status: OK in 0.072 seconds
+[0m12:02:56.233949 [debug] [Thread-1 (]: On test.real_estate_analytics.unique_fact_publicaciones_id_publicacion.fc66e23103: ROLLBACK
+[0m12:02:56.233949 [debug] [Thread-1 (]: Failed to rollback 'test.real_estate_analytics.unique_fact_publicaciones_id_publicacion.fc66e23103'
+[0m12:02:56.233949 [debug] [Thread-1 (]: On test.real_estate_analytics.unique_fact_publicaciones_id_publicacion.fc66e23103: Close
+[0m12:02:56.241337 [info ] [Thread-1 (]: 11 of 11 PASS unique_fact_publicaciones_id_publicacion ......................... [[32mPASS[0m in 0.11s]
+[0m12:02:56.243582 [debug] [Thread-1 (]: Finished running node test.real_estate_analytics.unique_fact_publicaciones_id_publicacion.fc66e23103
+[0m12:02:56.246656 [debug] [MainThread]: Using duckdb connection "master"
+[0m12:02:56.247659 [debug] [MainThread]: On master: BEGIN
+[0m12:02:56.248689 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m12:02:56.261299 [debug] [MainThread]: SQL status: OK in 0.012 seconds
+[0m12:02:56.262297 [debug] [MainThread]: On master: COMMIT
+[0m12:02:56.263208 [debug] [MainThread]: Using duckdb connection "master"
+[0m12:02:56.263208 [debug] [MainThread]: On master: COMMIT
+[0m12:02:56.264846 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m12:02:56.265849 [debug] [MainThread]: On master: Close
+[0m12:02:56.267912 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m12:02:56.268912 [debug] [MainThread]: Connection 'list_real_estate_main_marts' was properly closed.
+[0m12:02:56.270017 [debug] [MainThread]: Connection 'test.real_estate_analytics.unique_fact_publicaciones_id_publicacion.fc66e23103' was properly closed.
+[0m12:02:56.270017 [info ] [MainThread]: 
+[0m12:02:56.271263 [info ] [MainThread]: Finished running 11 data tests in 0 hours 0 minutes and 1.80 seconds (1.80s).
+[0m12:02:56.278570 [debug] [MainThread]: Command end result
+[0m12:02:56.329296 [info ] [MainThread]: 
+[0m12:02:56.331450 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m12:02:56.335227 [info ] [MainThread]: 
+[0m12:02:56.342860 [info ] [MainThread]: Done. PASS=11 WARN=0 ERROR=0 SKIP=0 TOTAL=11
+[0m12:02:56.346212 [debug] [MainThread]: Command `dbt test` succeeded at 12:02:56.346212 after 3.22 seconds
+[0m12:02:56.346212 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CDA5989A30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CDA598ACC0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CDA79DC050>]}
+[0m12:02:56.346212 [debug] [MainThread]: Flushing usage events
