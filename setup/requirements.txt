@@ -12,7 +12,8 @@ dbt-core==1.8.0         # framework de transformación SQL
 dbt-duckdb==1.8.0       # adaptador dbt para DuckDB
 
 # — Orquestación —
-prefect==3.0.0          # orquestación moderna de pipelines
+pydantic==2.6.4         # requerido por prefect (versión compatible)
+prefect==2.19.9         # orquestación de pipelines
 
 # — Visualización y utilidades —
 python-dotenv==1.0.1    # manejo de variables de entorno (.env)

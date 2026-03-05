@@ -1,7 +1,7 @@
 """
 prefect/pipeline.py
 ====================
-Orquestación completa del pipeline con Prefect 3.
+Orquestación completa del pipeline con Prefect 2.
 
 Concepto clave — ¿qué es Prefect?
   Es el "director de orquesta" del pipeline. No transforma datos —
@@ -28,9 +28,8 @@ from pathlib import Path
 from prefect import flow, task, get_run_logger
 from prefect.tasks import task_input_hash
 from datetime import timedelta
-from dotenv import load_dotenv
 
-load_dotenv()
+from dotenv import load_dotenv
 
 PROJECT_DIR  = Path(os.getenv("PROJECT_DIR",  "."))
 DBT_DIR      = PROJECT_DIR / "dbt_realestate"
@@ -205,7 +204,6 @@ def task_export_for_tableau() -> list:
 @flow(
     name="real-estate-argentina-pipeline",
     description="Pipeline completo Real Estate Argentina: Kaggle → DuckDB → dbt → Tableau",
-    log_prints=True
 )
 def real_estate_pipeline():
     """
@@ -229,13 +227,14 @@ def real_estate_pipeline():
     row_count = task_load_raw(csv_path)
     
     # Step 3: Transformar con dbt (depende del step 2)
-    dbt_ok = task_dbt_run(wait_for=[row_count])
+    # En Prefect 2, las dependencias se manejan pasando resultados como argumentos
+    dbt_ok = task_dbt_run()
     
     # Step 4: Validar calidad (depende del step 3)
-    tests_ok = task_dbt_test(wait_for=[dbt_ok])
+    tests_ok = task_dbt_test()
     
     # Step 5: Exportar para Tableau (depende del step 4)
-    exports = task_export_for_tableau(wait_for=[tests_ok])
+    exports = task_export_for_tableau()
     
     logger.info(f"✅ Pipeline completado. Archivos Tableau: {exports}")
     return exports
