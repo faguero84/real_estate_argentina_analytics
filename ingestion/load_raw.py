@@ -87,10 +87,9 @@ def load_raw_to_duckdb(csv_path: Path) -> dict:
             '{csv_path.name}'  AS _source_file
         FROM read_csv_auto(
             '{csv_path}',
-            -- read_csv_auto infiere tipos automáticamente
-            -- para archivos grandes esto ahorra mucho tiempo
-            all_varchar = true  -- cargamos todo como string en RAW
-                                -- dbt se encargará del tipado correcto
+            all_varchar = true,
+            ignore_errors = true,
+            null_padding = true
         )
     """)
     
